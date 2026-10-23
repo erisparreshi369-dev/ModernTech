@@ -13,8 +13,9 @@ desktop.ini
 *~
 *.bak
 
-# Build / temp (the game caches compiled .cs mods as .dcache)
+# Build / temp (the game caches compiled .cs mods as .dcache and <name>H.bin)
 *.dcache
+*H.bin
 *.tmp
 *.log
 /temp/
