@@ -1,0 +1,249 @@
+SoftwareType
+	{
+	Name			"Processor"
+	Description		"Billions of tiny switches doing maths very, very quickly"
+	Random			0.15
+	OptimalDevTime	55
+	SubmarketNames	[ Office; Gaming; Servers ]
+	NameGenerator	MT_CPU
+	InHouse			False
+	Hardware		True
+	Categories
+		[
+			{
+			Name			"Desktop CPU"
+			Description		"The beating heart of every office PC"
+			Unlock			1982
+			Popularity		0.4
+			Retention		36
+			TimeScale		1
+			Iterative		1
+			IdealPrice		250
+			Submarkets		[ 4; 3; 1 ]
+			}
+			{
+			Name			"Server CPU"
+			Description		"Lots of cores, lots of cache, lots of money"
+			Unlock			1995
+			Popularity		0.05
+			Retention		48
+			TimeScale		1
+			Iterative		1
+			IdealPrice		1500
+			Submarkets		[ 1; 0; 4 ]
+			}
+			{
+			Name			"Mobile chip"
+			Description		"Desktop power on a phone battery. Mostly"
+			Unlock			2007
+			Popularity		0.3
+			Retention		24
+			TimeScale		0.9
+			Iterative		1
+			IdealPrice		120
+			Submarkets		[ 3; 2; 0 ]
+			}
+		]
+	Manufacturing
+		{
+		Components
+			[
+				{
+				Name				"CPU die"
+				BuiltInThumbnail	Microchip
+				Price				50
+				Time				16
+				}
+				{
+				Name				"Cache memory"
+				BuiltInThumbnail	Microchip
+				Price				10
+				Time				4
+				}
+				{
+				Name				"Graphics block"
+				BuiltInThumbnail	Microchip
+				Price				10
+				Time				4
+				DependsOn			"Integrated graphics"
+				}
+				{
+				Name				"Neural block"
+				BuiltInThumbnail	Microchip
+				Price				10
+				Time				4
+				DependsOn			"Neural engine"
+				}
+				{
+				Name				"Chip package"
+				BuiltInThumbnail	PCB
+				Price				8
+				Time				8
+				}
+				{
+				Name				"Heat spreader"
+				BuiltInThumbnail	Thermostat
+				Price				3
+				Time				2
+				}
+			]
+		Processes
+			[
+				{
+				Inputs	[ "CPU die"; "Cache memory"; "Graphics block"; "Neural block" ]
+				Output	"Chip package"
+				}
+				{
+				Inputs	[ "Chip package"; "Heat spreader" ]
+				Output	Final
+				}
+			]
+		FinalTime	2
+		Design		[ MT_CPU ]
+		}
+	Features
+		[
+			{
+			Name		Architecture
+			Spec		Hardware
+			DevTime		8
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		Pipelining
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 2; 2 ]
+					}
+					{
+					Name		"Multi-core"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2005
+					Submarkets	[ 2; 3; 4 ]
+					}
+					{
+					Name		"Integrated graphics"
+					DevTime		4
+					Level		1
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 4; 1; 0 ]
+					}
+					{
+					Name		"Neural engine"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2017
+					Submarkets	[ 2; 1; 3 ]
+					}
+					{
+					Name		Chiplets
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2019
+					Submarkets	[ 0; 2; 4 ]
+					}
+				]
+			}
+			{
+			Name		"Chip process"
+			Spec		Hardware
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Die shrink"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 2; 2 ]
+					}
+					{
+					Name		"3D transistors"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2011
+					Submarkets	[ 2; 3; 3 ]
+					}
+					{
+					Name		"Advanced packaging"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2020
+					Submarkets	[ 0; 2; 4 ]
+					}
+				]
+			}
+			{
+			Name		"Power management"
+			Spec		System
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Sleep states"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 0; 1 ]
+					}
+					{
+					Name		"Turbo boost"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2008
+					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name		"Efficiency cores"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2021
+					Submarkets	[ 3; 1; 1 ]
+					}
+				]
+			}
+			{
+			Name		Security
+			Spec		System
+			DevTime		2
+			CodeArt		1
+			Optional	True
+			Submarkets	[ 1; 0; 2 ]
+			Features
+				[
+					{
+					Name		"Secure enclave"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2013
+					Submarkets	[ 1; 0; 3 ]
+					}
+					{
+					Name		"Memory encryption"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2017
+					Submarkets	[ 0; 0; 4 ]
+					}
+				]
+			}
+		]
+	}

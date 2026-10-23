@@ -1,0 +1,29 @@
+Design
+	{
+	ID						MT_CPU
+	Name					"Processor"
+	BaseMesh				Body
+	Objects
+		[
+			{
+			ID		Body
+			Name	Body
+			Mesh	"mt_cpu.obj"
+			}
+		]
+	Attachments				[ ]
+	BaseTexture				"mt_albedo.png"
+	ExtraTexture			"mt_extra.png"
+	PrimaryColorEnabled		True
+	SecondaryColorEnabled	True
+	TertiaryColorEnabled	True
+	ColorSets
+		[
+			{
+			PrimaryColors	[ B9BDC4; 8A8F99; D4AF37 ]
+			SecondaryColors	[ 0B6E4F; 1F3A5F ]
+			TertiaryColors	[ 2B2D33 ]
+			}
+		]
+	WorldScale				0.2
+	}

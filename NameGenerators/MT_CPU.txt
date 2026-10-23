@@ -1,0 +1,30 @@
+-start(base)
+-base(base2,num)
+Corvid
+Zenith
+Atlas
+Pulsar
+Quasar
+Kestrel
+Helios
+Falcon
+Orion
+Apex
+-base2(num)
+ X
+ i
+ Pro
+ Max
+-num(ext,stop)
+ 3
+ 5
+ 7
+ 9
+ 486
+ 2600
+ 7950
+-ext(stop)
+ K
+ HX
+ Ultra
+ Lite

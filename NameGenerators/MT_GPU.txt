@@ -1,0 +1,31 @@
+-start(base)
+-base(base2,num)
+Halcyon
+Vortex
+Colossus
+Nebula
+Fury
+Phantom
+Raptor
+Aurora
+Inferno
+Spectra
+-base2(num)
+ RX
+ GT
+ XT
+ Pro
+-num(ext,stop)
+ 100
+ 280
+ 470
+ 960
+ 1080
+ 3090
+ 5800
+ 9000
+-ext(stop)
+ Ti
+ Super
+ Ultra
+ OC

@@ -1,0 +1,267 @@
+SoftwareType
+	{
+	Name			"Graphics Card"
+	Description		"A small, very hot computer inside your computer"
+	Random			0.2
+	OptimalDevTime	50
+	SubmarketNames	[ Gaming; "Content creation"; "AI compute" ]
+	NameGenerator	MT_GPU
+	InHouse			False
+	Hardware		True
+	Categories
+		[
+			{
+			Name			"3D accelerator"
+			Description		"Finally, polygons that don't crawl"
+			Unlock			1996
+			Popularity		0.15
+			Retention		24
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		200
+			Submarkets		[ 4; 2; 0 ]
+			}
+			{
+			Name			"Gaming GPU"
+			Description		"More frames, more fans, more lights"
+			Unlock			2000
+			Popularity		0.3
+			Retention		30
+			TimeScale		1
+			Iterative		1
+			IdealPrice		400
+			Submarkets		[ 4; 2; 1 ]
+			}
+			{
+			Name			"AI accelerator"
+			Description		"Sold by the rack to people training very large models"
+			Unlock			2017
+			Popularity		0.04
+			Retention		36
+			TimeScale		1
+			Iterative		1
+			IdealPrice		2000
+			Submarkets		[ 0; 1; 4 ]
+			}
+		]
+	Manufacturing
+		{
+		Components
+			[
+				{
+				Name				"GPU die"
+				BuiltInThumbnail	Microchip
+				Price				60
+				Time				16
+				}
+				{
+				Name				"Memory chips"
+				BuiltInThumbnail	Microchip
+				Price				20
+				Time				8
+				}
+				{
+				Name				"HBM stack"
+				BuiltInThumbnail	Microchip
+				Price				80
+				Time				16
+				DependsOn			"High-bandwidth memory"
+				}
+				{
+				Name				"Circuit board"
+				BuiltInThumbnail	PCB
+				Price				15
+				Time				8
+				}
+				{
+				Name				"Fan cooler"
+				BuiltInThumbnail	Thermostat
+				Price				10
+				Time				4
+				}
+				{
+				Name				"Liquid cooler"
+				BuiltInThumbnail	Thermostat
+				Price				30
+				Time				8
+				DependsOn			"Liquid cooling"
+				}
+				{
+				Name				"RGB strip"
+				BuiltInThumbnail	LED
+				Price				3
+				Time				2
+				DependsOn			"RGB lighting"
+				}
+				{
+				Name				Shroud
+				BuiltInThumbnail	PlasticCase
+				Price				8
+				Time				4
+				}
+			]
+		Processes
+			[
+				{
+				Inputs	[ "GPU die"; "Memory chips"; "HBM stack" ]
+				Output	"Circuit board"
+				}
+				{
+				Inputs	[ "Fan cooler"; "Liquid cooler"; "RGB strip" ]
+				Output	Shroud
+				}
+				{
+				Inputs	[ "Circuit board"; Shroud ]
+				Output	Final
+				}
+			]
+		FinalTime	4
+		Design		[ MT_GPU ]
+		}
+	Features
+		[
+			{
+			Name		"Chip design"
+			Spec		Hardware
+			DevTime		8
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Shader cores"
+					DevTime		4
+					Level		1
+					CodeArt		1
+					Unlock		2001
+					Submarkets	[ 3; 2; 1 ]
+					}
+					{
+					Name		"Tensor cores"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2017
+					Submarkets	[ 0; 1; 4 ]
+					}
+					{
+					Name		"Ray tracing cores"
+					Description "Every reflection, calculated the hard way"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2018
+					Submarkets	[ 4; 2; 0 ]
+					}
+					{
+					Name		"Chiplet design"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2022
+					Submarkets	[ 1; 2; 3 ]
+					}
+				]
+			}
+			{
+			Name		Memory
+			Spec		Hardware
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Fast video memory"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 2; 1 ]
+					}
+					{
+					Name		"High-bandwidth memory"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2015
+					Submarkets	[ 0; 1; 4 ]
+					}
+					{
+					Name		"Large VRAM"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2020
+					Submarkets	[ 1; 3; 3 ]
+					}
+				]
+			}
+			{
+			Name		Cooling
+			Spec		Hardware
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 2; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Dual fans"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 2; 1 ]
+					}
+					{
+					Name		"Liquid cooling"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 3; 1; 2 ]
+					}
+					{
+					Name		"RGB lighting"
+					Description "Adds 10 frames per second, according to science"
+					DevTime		1
+					Level		1
+					CodeArt		0.5
+					Unlock		2015
+					Submarkets	[ 4; 0; 0 ]
+					}
+				]
+			}
+			{
+			Name		Drivers
+			Spec		System
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Game optimizations"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 4; 0; 0 ]
+					}
+					{
+					Name		"Compute SDK"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2007
+					Submarkets	[ 0; 2; 4 ]
+					}
+					{
+					Name		"AI upscaling"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2019
+					Submarkets	[ 4; 2; 0 ]
+					}
+				]
+			}
+		]
+	}

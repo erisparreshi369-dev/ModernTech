@@ -1,0 +1,20 @@
+CompanyType
+	{
+	Specialization		Chipmakers
+	PerYear				0.15
+	Min					2
+	Max					4
+	Frameworks			False
+	NameGen				MT_Company
+	Types
+		[
+			{
+			Software	"Graphics Card"
+			Chance		1
+			}
+			{
+			Software	Processor
+			Chance		1
+			}
+		]
+	}
