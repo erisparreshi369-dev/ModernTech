@@ -1,0 +1,148 @@
+SoftwareType
+	{
+	Name			"Mobile Wallet"
+	Description		"Your bank, in the same pocket as your bank card"
+	Random			0.2
+	OptimalDevTime	35
+	SubmarketNames	[ Shoppers; Savers; Merchants ]
+	NameGenerator	MT_Wallet
+	OSSupport		Phone
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Mobile banking"
+			Description		"Check your balance, then wish you hadn't"
+			Unlock			2009
+			Popularity		0.35
+			Retention		36
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		20
+			Submarkets		[ 1; 4; 1 ]
+			}
+			{
+			Name			"Tap to pay"
+			Description		"Wave your phone, lose your money faster"
+			Unlock			2014
+			Popularity		0.55
+			Retention		36
+			TimeScale		0.9
+			Iterative		1
+			IdealPrice		30
+			Submarkets		[ 4; 1; 3 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		Security
+			Spec		System
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"PIN lock"
+					DevTime		1
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 2; 1 ]
+					}
+					{
+					Name		"Fingerprint login"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2013
+					Submarkets	[ 3; 2; 0 ]
+					}
+					{
+					Name		"Fraud detection"
+					Description "Flags your 3am taco order as suspicious"
+					Server		0.0002
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2016
+					Submarkets	[ 1; 2; 3 ]
+					}
+				]
+			}
+			{
+			Name		Payments
+			Spec		Network
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Bank transfers"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 3; 1 ]
+					}
+					{
+					Name		"Peer-to-peer payments"
+					Server		0.0002
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2013
+					Submarkets	[ 4; 1; 0 ]
+					}
+					{
+					Name				"Contactless payments"
+					DevTime				4
+					Level				2
+					CodeArt				1
+					Unlock				2014
+					SoftwareCategories	[ "Tap to pay" ]
+					Submarkets			[ 3; 0; 4 ]
+					}
+					{
+					Name		"QR code payments"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2017
+					Submarkets	[ 2; 0; 4 ]
+					}
+				]
+			}
+			{
+			Name		Interface
+			Spec		2D
+			DevTime		3
+			CodeArt		0.5
+			Submarkets	[ 1; 2; 1 ]
+			Features
+				[
+					{
+					Name		"Spending charts"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name		"Savings goals"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 0; 4; 0 ]
+					}
+					{
+					Name		"Digital receipts"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 2; 1; 3 ]
+					}
+				]
+			}
+		]
+	}

@@ -1,0 +1,177 @@
+SoftwareType
+	{
+	Name			"Messaging App"
+	Description		"Typing... typing... typing..."
+	Random			0.3
+	OptimalDevTime	30
+	SubmarketNames	[ Casual; Business; Privacy ]
+	NameGenerator	MT_Messaging
+	OSSupport		[ Computer; Phone ]
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Instant messenger"
+			Description		"Away messages and buddy lists"
+			Unlock			1996
+			Popularity		0.35
+			Retention		24
+			TimeScale		0.7
+			Iterative		1
+			IdealPrice		15
+			Submarkets		[ 4; 2; 1 ]
+			}
+			{
+			Name			"Mobile messenger"
+			Description		"Your whole social life in one green or blue bubble"
+			Unlock			2009
+			Popularity		0.85
+			Retention		24
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		15
+			Submarkets		[ 4; 2; 2 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		Chat
+			Spec		System
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Group chats"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 2; 0 ]
+					}
+					{
+					Name		"Read receipts"
+					DevTime		1
+					Level		1
+					CodeArt		1
+					Unlock		2009
+					Submarkets	[ 2; 2; 0 ]
+					}
+					{
+					Name		"Message reactions"
+					DevTime		1
+					Level		1
+					CodeArt		0.5
+					Unlock		2015
+					Submarkets	[ 3; 0; 0 ]
+					}
+				]
+			}
+			{
+			Name		Delivery
+			Spec		Network
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Push notifications"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2009
+					Submarkets	[ 2; 2; 0 ]
+					}
+					{
+					Name		"Chat backup"
+					Server		0.0005
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 2; 2; 0 ]
+					}
+					{
+					Name		"End-to-end encryption"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2014
+					Submarkets	[ 0; 1; 4 ]
+					}
+				]
+			}
+			{
+			Name		Calls
+			Spec		Audio
+			DevTime		3
+			CodeArt		0.8
+			Optional	True
+			Submarkets	[ 2; 2; 0 ]
+			Features
+				[
+					{
+					Name		"Voice calls"
+					Server		0.0005
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2003
+					Submarkets	[ 2; 3; 0 ]
+					}
+					{
+					Name		"Voice notes"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2013
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"Video calls"
+					Server		0.001
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 2; 4; 0 ]
+					}
+				]
+			}
+			{
+			Name		Interface
+			Spec		2D
+			DevTime		2
+			CodeArt		0.4
+			Submarkets	[ 2; 1; 0 ]
+			Features
+				[
+					{
+					Name		Emoticons
+					DevTime		1
+					Level		1
+					CodeArt		0.3
+					Submarkets	[ 3; 0; 0 ]
+					}
+					{
+					Name		"Sticker packs"
+					DevTime		2
+					Level		1
+					CodeArt		0.3
+					Unlock		2011
+					Submarkets	[ 4; 0; 0 ]
+					}
+					{
+					Name		"Disappearing messages"
+					DevTime		2
+					Level		2
+					CodeArt		1
+					Unlock		2013
+					Submarkets	[ 1; 0; 4 ]
+					}
+				]
+			}
+		]
+	}

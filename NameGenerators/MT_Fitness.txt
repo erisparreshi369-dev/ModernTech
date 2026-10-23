@@ -1,0 +1,23 @@
+-start(base)
+-base(base2,ext,stop)
+Stride
+Pulse
+Sprint
+Pace
+Vigor
+Summit
+Flex
+Cardio
+Motion
+Zen
+-base2(ext,stop)
+fit
+track
+coach
+ly
+ Fit
+-ext(stop)
+ Pro
+ Plus
+ Run
+ Coach

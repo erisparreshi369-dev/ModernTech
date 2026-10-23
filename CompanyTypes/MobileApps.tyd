@@ -1,0 +1,19 @@
+CompanyType
+	{
+	Specialization		"Mobile apps"
+	PerYear				0.2
+	Min					2
+	Max					4
+	NameGen				MT_Company
+	Types
+		[
+			{
+			Software	"Mobile Wallet"
+			Chance		1
+			}
+			{
+			Software	"Fitness App"
+			Chance		1
+			}
+		]
+	}

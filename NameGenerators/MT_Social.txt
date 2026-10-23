@@ -1,0 +1,24 @@
+-start(base)
+-base(base2,ext,stop)
+Snap
+Chirp
+Loop
+Vibe
+Glimpse
+Buzz
+Echo
+Spark
+Flick
+Mingle
+-base2(ext,stop)
+gram
+book
+feed
+ly
+hub
+ Social
+-ext(stop)
+ Live
+ Stories
+ Plus
+ Lite

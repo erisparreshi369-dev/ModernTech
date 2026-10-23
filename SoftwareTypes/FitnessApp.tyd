@@ -1,0 +1,165 @@
+SoftwareType
+	{
+	Name			"Fitness App"
+	Description		"Counts your steps so you don't have to"
+	Random			0.3
+	OptimalDevTime	25
+	SubmarketNames	[ Beginners; Athletes; "Health tracking" ]
+	NameGenerator	MT_Fitness
+	OSSupport		Phone
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Step tracker"
+			Description		"10,000 steps or bust"
+			Unlock			2009
+			Popularity		0.2
+			Retention		18
+			TimeScale		0.6
+			Iterative		1
+			IdealPrice		10
+			Submarkets		[ 4; 1; 2 ]
+			}
+			{
+			Name			"Health coach"
+			Description		"A personal trainer that never gets tired of you"
+			Unlock			2018
+			Popularity		0.35
+			Retention		18
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		40
+			Submarkets		[ 2; 3; 4 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		Tracking
+			Spec		System
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Step counter"
+					DevTime		1
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 0; 1 ]
+					}
+					{
+					Name		"Route tracking"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name		"Sleep tracking"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2014
+					Submarkets	[ 1; 0; 4 ]
+					}
+					{
+					Name		"Heart rate zones"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2015
+					Submarkets	[ 0; 4; 2 ]
+					}
+				]
+			}
+			{
+			Name		Coaching
+			Spec		2D
+			DevTime		3
+			CodeArt		0.5
+			Submarkets	[ 2; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Workout plans"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 3; 2; 0 ]
+					}
+					{
+					Name		"Progress charts"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 1; 2; 3 ]
+					}
+					{
+					Name				"AI coach"
+					Description			"Encouraging, relentless, slightly smug"
+					DevTime				4
+					Level				2
+					CodeArt				1
+					Unlock				2023
+					SoftwareCategories	[ "Health coach" ]
+					Submarkets			[ 3; 2; 2 ]
+					}
+				]
+			}
+			{
+			Name		Community
+			Spec		Network
+			DevTime		2
+			CodeArt		1
+			Submarkets	[ 2; 2; 0 ]
+			Features
+				[
+					{
+					Name		Challenges
+					Server		0.0002
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 4; 1; 0 ]
+					}
+					{
+					Name		Leaderboards
+					Server		0.0002
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 4; 0 ]
+					}
+				]
+			}
+			{
+			Name		Guidance
+			Spec		Audio
+			DevTime		2
+			CodeArt		0.5
+			Optional	True
+			Submarkets	[ 2; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Voice guidance"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Unlock		2012
+					Submarkets	[ 3; 2; 0 ]
+					}
+					{
+					Name		"Workout playlists"
+					DevTime		1
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 2; 2; 0 ]
+					}
+				]
+			}
+		]
+	}

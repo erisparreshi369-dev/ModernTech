@@ -1,0 +1,170 @@
+SoftwareType
+	{
+	Name			"Social App"
+	Description		"Where everyone shares everything, whether you asked or not"
+	Random			0.4
+	OptimalDevTime	30
+	SubmarketNames	[ Friends; Creators; Advertisers ]
+	NameGenerator	MT_Social
+	OSSupport		[ Computer; Phone ]
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Social network"
+			Description		"Poke your friends, then regret it"
+			Unlock			2004
+			Popularity		0.55
+			Retention		24
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		20
+			Submarkets		[ 4; 1; 2 ]
+			}
+			{
+			Name			"Photo sharing"
+			Description		"Breakfast, but with a filter"
+			Unlock			2010
+			Popularity		0.6
+			Retention		18
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		20
+			Submarkets		[ 2; 4; 2 ]
+			}
+			{
+			Name			"Short video"
+			Description		"Fifteen seconds at a time, five hours a day"
+			Unlock			2016
+			Popularity		0.75
+			Retention		12
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		25
+			Submarkets		[ 1; 4; 3 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		Feed
+			Spec		System
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		Timeline
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"Recommendation algorithm"
+					Description "Knows what you want before you do"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 1; 2; 4 ]
+					}
+					{
+					Name		Stories
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2016
+					Submarkets	[ 3; 2; 1 ]
+					}
+				]
+			}
+			{
+			Name		Media
+			Spec		2D
+			DevTime		3
+			CodeArt		0.5
+			Submarkets	[ 1; 2; 1 ]
+			Features
+				[
+					{
+					Name		"Photo filters"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Unlock		2010
+					Submarkets	[ 2; 3; 0 ]
+					}
+					{
+					Name		"Video editor"
+					DevTime		4
+					Level		2
+					CodeArt		0.5
+					Unlock		2016
+					Submarkets	[ 0; 4; 1 ]
+					}
+					{
+					Name		"Profile themes"
+					DevTime		2
+					Level		1
+					CodeArt		0.3
+					Submarkets	[ 3; 1; 0 ]
+					}
+				]
+			}
+			{
+			Name		Network
+			Spec		Network
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 2; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Direct messages"
+					Server		0.0002
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 4; 1; 0 ]
+					}
+					{
+					Name		"Live streaming"
+					Server		0.001
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2016
+					Submarkets	[ 1; 4; 2 ]
+					}
+					{
+					Name		"Content moderation"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 2; 0; 3 ]
+					}
+				]
+			}
+			{
+			Name				Sound
+			Spec				Audio
+			DevTime				2
+			CodeArt				0.5
+			Optional			True
+			SoftwareCategories	[ "Short video" ]
+			Submarkets			[ 1; 2; 0 ]
+			Features
+				[
+					{
+					Name		"Music overlay"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 1; 3; 1 ]
+					}
+				]
+			}
+		]
+	}

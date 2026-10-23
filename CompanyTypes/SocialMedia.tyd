@@ -1,0 +1,19 @@
+CompanyType
+	{
+	Specialization		"Social media"
+	PerYear				0.25
+	Min					2
+	Max					4
+	NameGen				MT_Company
+	Types
+		[
+			{
+			Software	"Social App"
+			Chance		1
+			}
+			{
+			Software	"Messaging App"
+			Chance		1
+			}
+		]
+	}

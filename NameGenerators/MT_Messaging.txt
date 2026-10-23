@@ -1,0 +1,23 @@
+-start(base)
+-base(base2,ext,stop)
+Ping
+Chatter
+Whisper
+Signal
+Parrot
+Relay
+Pigeon
+Murmur
+Bubble
+Hello
+-base2(ext,stop)
+app
+box
+chat
+talk
+ Messenger
+-ext(stop)
+ Pro
+ Business
+ Lite
+ Secure
