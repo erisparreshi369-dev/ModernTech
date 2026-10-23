@@ -1,0 +1,37 @@
+Furniture
+	{
+	Name		MT_Workstation
+	Base		"Modern Computer"
+	Thumbnail	"workstation_thumb.png"
+	UpgradeFrom	Computer
+	Models
+		[
+			{
+			File		"workstation.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName			"Workstation Tower"
+		ButtonDescription		"A big tower for serious work. Faster than a normal desktop, uses more power."
+		Cost					1700
+		Wattage					1000
+		Noisiness				1
+		UnlockYear				2012
+		ComputerPowerModifier	1.15
+		IgnorePCRelease			True
+		ColorPrimaryEnabled		True
+		ColorPrimaryDefault		"30333A"
+		PrimaryColorName		Case
+		ColorSecondaryEnabled	True
+		ColorSecondaryDefault	"8A8F99"
+		SecondaryColorName		Accent
+		ColorTertiaryEnabled	True
+		ColorTertiaryDefault	"20C8E0"
+		TertiaryColorName		Lights
+		}
+	}

@@ -1,0 +1,37 @@
+Furniture
+	{
+	Name		MT_Ultrabook
+	Base		"Laptop"
+	Thumbnail	"ultrabook_thumb.png"
+	UpgradeFrom	Computer
+	Models
+		[
+			{
+			File		"ultrabook.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName			"Ultrabook"
+		ButtonDescription		"Thin and light. Quieter and more efficient than an old laptop."
+		Cost					1500
+		Wattage					200
+		Noisiness				0.1
+		UnlockYear				2012
+		ComputerPowerModifier	0.9
+		IgnorePCRelease			True
+		ColorPrimaryEnabled		True
+		ColorPrimaryDefault		"B9BDC4"
+		PrimaryColorName		Case
+		ColorSecondaryEnabled	True
+		ColorSecondaryDefault	"2B2D33"
+		SecondaryColorName		Accent
+		ColorTertiaryEnabled	True
+		ColorTertiaryDefault	"20C8E0"
+		TertiaryColorName		Lights
+		}
+	}

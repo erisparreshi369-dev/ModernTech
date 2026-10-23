@@ -1,0 +1,9 @@
+Materials
+	{
+	MT_PC
+		{
+		Type		Standard
+		Texture		"mt_albedo.png"
+		ExtraMap	"mt_extra.png"
+		}
+	}

@@ -1,0 +1,37 @@
+Furniture
+	{
+	Name		MT_AIWorkstation
+	Base		"Modern Computer"
+	Thumbnail	"aiworkstation_thumb.png"
+	UpgradeFrom	Computer
+	Models
+		[
+			{
+			File		"aiworkstation.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName			"AI Workstation"
+		ButtonDescription		"Dual screens and a case full of graphics cards. Very fast, very loud, very hungry."
+		Cost					2200
+		Wattage					1800
+		Noisiness				1.5
+		UnlockYear				2023
+		ComputerPowerModifier	1.4
+		IgnorePCRelease			True
+		ColorPrimaryEnabled		True
+		ColorPrimaryDefault		"1C1D22"
+		PrimaryColorName		Case
+		ColorSecondaryEnabled	True
+		ColorSecondaryDefault	"3A3D45"
+		SecondaryColorName		Accent
+		ColorTertiaryEnabled	True
+		ColorTertiaryDefault	"2EE6FF"
+		TertiaryColorName		Lights
+		}
+	}

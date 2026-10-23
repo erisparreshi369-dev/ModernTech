@@ -1,0 +1,37 @@
+Furniture
+	{
+	Name		MT_MiniPC
+	Base		"Modern Computer"
+	Thumbnail	"minipc_thumb.png"
+	UpgradeFrom	Computer
+	Models
+		[
+			{
+			File		"minipc.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName			"Mini PC"
+		ButtonDescription		"Small, quiet and cheap to run, but a little slower than a full desktop."
+		Cost					1200
+		Wattage					300
+		Noisiness				0.3
+		UnlockYear				2010
+		ComputerPowerModifier	0.9
+		IgnorePCRelease			True
+		ColorPrimaryEnabled		True
+		ColorPrimaryDefault		"2B2D33"
+		PrimaryColorName		Case
+		ColorSecondaryEnabled	True
+		ColorSecondaryDefault	"8A8F99"
+		SecondaryColorName		Accent
+		ColorTertiaryEnabled	True
+		ColorTertiaryDefault	"20C8E0"
+		TertiaryColorName		Lights
+		}
+	}
