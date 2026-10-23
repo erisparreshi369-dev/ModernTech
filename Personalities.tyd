@@ -1,0 +1,19 @@
+PersonalityGraph
+	{
+	Personalities
+		[
+			{
+			Name			Gadgeteer
+			Traits			[ RGBThumb; Forgetful ]
+			Expression		Smile
+			Relationships
+				{
+				Nocturnal	1.25
+				}
+			}
+			{
+			Name			Nocturnal
+			Traits			[ NightOwl ]
+			}
+		]
+	}
