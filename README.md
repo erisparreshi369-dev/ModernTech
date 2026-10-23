@@ -18,7 +18,7 @@ Data mod only (TyD files, plus optional `.cs` scripts compiled by the game). No 
   - **AI Assistant**: voice assistant (2011), chat assistant (2022), personal agent (2026)
   - **Image Generator**: photo filter apps (2016), text-to-image (2022), text-to-video (2024)
   - **Coding Assistant**: smart autocomplete (2018), pair programmer (2021), coding agent (2025)
-  - **Driving Autopilot**: driver assistance (2008), robotaxi (2020)
+  - **Self-Driving Software**: driver assistance (2008), robotaxi (2020)
 
 ### Planned
 - Phone and mobile software

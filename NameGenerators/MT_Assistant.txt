@@ -1,0 +1,24 @@
+-start(base)
+-base(base2,ext,stop)
+Aria
+Nova
+Sage
+Echo
+Lumi
+Orbit
+Juno
+Kairo
+Vesta
+Pilot
+-base2(ext,stop)
+Mind
+Mate
+Pal
+ Assist
+ One
+-ext(stop)
+ Pro
+ Plus
+ Go
+ Max
+ Home

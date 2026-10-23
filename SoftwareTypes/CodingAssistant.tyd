@@ -1,0 +1,167 @@
+SoftwareType
+	{
+	Name			"Coding Assistant"
+	Description		"Writes code so your programmers can write more code"
+	Unlock			2018
+	Random			0.1
+	OptimalDevTime	40
+	SubmarketNames	[ Beginners; Professionals; Enterprise ]
+	NameGenerator	MT_Coding
+	OSSupport		Computer
+	InHouse			True
+	Categories
+		[
+			{
+			Name			"Smart autocomplete"
+			Description		"Finishes your lines before you do"
+			Unlock			2018
+			Popularity		0.25
+			Retention		24
+			TimeScale		0.7
+			Iterative		1
+			IdealPrice		60
+			Submarkets		[ 2; 3; 1 ]
+			}
+			{
+			Name			"AI pair programmer"
+			Description		"A colleague who never takes a coffee break"
+			Unlock			2021
+			Popularity		0.45
+			Retention		18
+			TimeScale		1
+			Iterative		1
+			IdealPrice		100
+			Submarkets		[ 2; 3; 2 ]
+			}
+			{
+			Name			"Coding agent"
+			Description		"Give it a ticket, get back a pull request"
+			Unlock			2025
+			Popularity		0.55
+			Retention		18
+			TimeScale		1
+			Iterative		1
+			IdealPrice		200
+			Submarkets		[ 1; 3; 4 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		"Code model"
+			Spec		System
+			DevTime		6
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Line completion"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"Whole-function generation"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2021
+					Submarkets	[ 2; 3; 1 ]
+					}
+					{
+					Name		"Bug fixing"
+					Description "Fixes one bug, politely introduces another"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 1; 3; 2 ]
+					}
+					{
+					Name		"Code review"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 0; 2; 4 ]
+					}
+					{
+					Name				"Autonomous tasks"
+					DevTime				6
+					Level				2
+					CodeArt				1
+					Unlock				2025
+					SoftwareCategories	[ "Coding agent" ]
+					Submarkets			[ 0; 3; 4 ]
+					}
+				]
+			}
+			{
+			Name		"Editor integration"
+			Spec		2D
+			DevTime		3
+			CodeArt		0.7
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Inline suggestions"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 2; 0 ]
+					}
+					{
+					Name		"Diff viewer"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 0; 2; 2 ]
+					}
+					{
+					Name		"Chat panel"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Unlock		2023
+					Submarkets	[ 3; 1; 1 ]
+					}
+				]
+			}
+			{
+			Name		Cloud
+			Spec		Network
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Repository indexing"
+					Server		0.0005
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 0; 3; 3 ]
+					}
+					{
+					Name		"Team policies"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 0; 0; 4 ]
+					}
+					{
+					Name		"Self-hosted option"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2020
+					Submarkets	[ 0; 1; 4 ]
+					}
+				]
+			}
+		]
+	}

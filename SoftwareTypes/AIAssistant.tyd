@@ -1,0 +1,206 @@
+SoftwareType
+	{
+	Name			"AI Assistant"
+	Description		"A digital helper that listens, talks back and gets things done"
+	Unlock			2011
+	Random			0.2
+	OptimalDevTime	40
+	SubmarketNames	[ Productivity; Conversation; Privacy ]
+	NameGenerator	MT_Assistant
+	OSSupport		[ Computer; Phone ]
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Voice assistant"
+			Description		"Set timers, check the weather, misunderstand song titles"
+			Unlock			2011
+			Popularity		0.35
+			Retention		24
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		30
+			Submarkets		[ 3; 1; 2 ]
+			}
+			{
+			Name			"Chat assistant"
+			Description		"Ask it anything. It will answer, confidently"
+			Unlock			2022
+			Popularity		0.8
+			Retention		18
+			TimeScale		1
+			Iterative		1
+			IdealPrice		60
+			Submarkets		[ 2; 4; 1 ]
+			}
+			{
+			Name			"Personal agent"
+			Description		"Books the flight, answers the email, forgets nothing"
+			Unlock			2026
+			Popularity		0.9
+			Retention		18
+			TimeScale		1
+			Iterative		1
+			IdealPrice		90
+			Submarkets		[ 4; 1; 2 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		"Language model"
+			Spec		System
+			Description "The brain of the operation"
+			DevTime		6
+			CodeArt		1
+			Submarkets	[ 1; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Intent recognition"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 1; 0 ]
+					}
+					{
+					Name		"Long-term memory"
+					Description "Remembers your birthday, and that thing you said in 2019"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 2; 2; 0 ]
+					}
+					{
+					Name		"On-device model"
+					Description "Your secrets never leave your pocket"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2024
+					Submarkets	[ 0; 1; 4 ]
+					}
+					{
+					Name				"Tool use"
+					DevTime				4
+					Level				2
+					CodeArt				1
+					Unlock				2024
+					SoftwareCategories	[ "Chat assistant"; "Personal agent" ]
+					Submarkets			[ 4; 0; 0 ]
+					}
+					{
+					Name				"Multi-step planning"
+					DevTime				5
+					Level				2
+					CodeArt				1
+					Unlock				2026
+					SoftwareCategories	[ "Personal agent" ]
+					Submarkets			[ 4; 1; 0 ]
+					}
+				]
+			}
+			{
+			Name		Voice
+			Spec		Audio
+			DevTime		3
+			CodeArt		0.6
+			Submarkets	[ 1; 2; 0 ]
+			Features
+				[
+					{
+					Name		"Wake word"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 1; 0 ]
+					}
+					{
+					Name		"Natural voice"
+					Description "Less robot, more radio host"
+					DevTime		3
+					Level		1
+					CodeArt		0.5
+					Unlock		2016
+					Submarkets	[ 0; 3; 0 ]
+					}
+					{
+					Name		"Real-time voice chat"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2024
+					Submarkets	[ 1; 4; 0 ]
+					}
+				]
+			}
+			{
+			Name		Interface
+			Spec		2D
+			DevTime		3
+			CodeArt		0.5
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Chat window"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 1; 2; 0 ]
+					}
+					{
+					Name		"Image understanding"
+					Description "Point the camera at the fridge, get a recipe"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 2; 2; 0 ]
+					}
+					{
+					Name		"Privacy dashboard"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 0; 0; 3 ]
+					}
+				]
+			}
+			{
+			Name		Cloud
+			Spec		Network
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 1; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Cloud sync"
+					Server		0.0005
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 1; 0 ]
+					}
+					{
+					Name		"Web search"
+					Server		0.001
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"End-to-end encryption"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 0; 0; 4 ]
+					}
+				]
+			}
+		]
+	}

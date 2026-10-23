@@ -1,0 +1,196 @@
+SoftwareType
+	{
+	Name			"Self-Driving Software"
+	Description		"Keeps the car between the lines, and eventually drives it for you"
+	Unlock			2008
+	Random			0.2
+	OptimalDevTime	60
+	SubmarketNames	[ Safety; Comfort; "Fleet operators" ]
+	NameGenerator	MT_Driving
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Driver assistance"
+			Description		"Hands on the wheel, please"
+			Unlock			2008
+			Popularity		0.3
+			Retention		36
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		250
+			Submarkets		[ 4; 3; 1 ]
+			}
+			{
+			Name			"Robotaxi"
+			Description		"No driver, no small talk"
+			Unlock			2020
+			Popularity		0.4
+			Retention		48
+			TimeScale		1
+			Iterative		1
+			IdealPrice		500
+			Submarkets		[ 3; 1; 4 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		Perception
+			Spec		3D
+			DevTime		6
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Lane detection"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 2; 0 ]
+					}
+					{
+					Name		"Pedestrian detection"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 4; 0; 2 ]
+					}
+					{
+					Name		"Night vision"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2014
+					Submarkets	[ 3; 1; 1 ]
+					}
+					{
+					Name		"Lidar fusion"
+					Description "Lasers. Lots of lasers"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2016
+					Submarkets	[ 3; 0; 3 ]
+					}
+				]
+			}
+			{
+			Name		"Driving logic"
+			Spec		System
+			DevTime		8
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Adaptive cruise control"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 3; 0 ]
+					}
+					{
+					Name		"Emergency braking"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 4; 0; 1 ]
+					}
+					{
+					Name		"Automatic parking"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name				"City driving"
+					DevTime				6
+					Level				2
+					CodeArt				1
+					Unlock				2020
+					SoftwareCategories	[ Robotaxi ]
+					Submarkets			[ 2; 2; 4 ]
+					}
+				]
+			}
+			{
+			Name		Connectivity
+			Spec		Network
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Over-the-air updates"
+					Server		0.0002
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 2; 1; 2 ]
+					}
+					{
+					Name		"HD map streaming"
+					Server		0.001
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2016
+					Submarkets	[ 2; 2; 3 ]
+					}
+					{
+					Name				"Fleet dashboard"
+					Server				0.0005
+					DevTime				4
+					Level				2
+					CodeArt				1
+					Unlock				2020
+					SoftwareCategories	[ Robotaxi ]
+					Submarkets			[ 0; 0; 4 ]
+					}
+				]
+			}
+			{
+			Name		Cabin
+			Spec		2D
+			DevTime		3
+			CodeArt		0.5
+			Optional	True
+			Submarkets	[ 0; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Voice commands"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 0; 3; 1 ]
+					}
+					{
+					Name		"Driver monitoring"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2018
+					Submarkets	[ 3; 1; 1 ]
+					}
+					{
+					Name				"Ride app"
+					DevTime				3
+					Level				1
+					CodeArt				0.5
+					Unlock				2020
+					SoftwareCategories	[ Robotaxi ]
+					Submarkets			[ 0; 2; 4 ]
+					}
+				]
+			}
+		]
+	}

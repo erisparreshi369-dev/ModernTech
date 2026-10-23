@@ -1,0 +1,195 @@
+SoftwareType
+	{
+	Name			"Image Generator"
+	Description		"Turns words into pictures, and pictures into better pictures"
+	Unlock			2016
+	Random			0.3
+	OptimalDevTime	35
+	SubmarketNames	[ Hobbyists; Artists; Marketing ]
+	NameGenerator	MT_ImageAI
+	OSSupport		[ Computer; Phone ]
+	InHouse			True
+	Categories
+		[
+			{
+			Name			"Photo filter app"
+			Description		"Your selfie, but as an oil painting"
+			Unlock			2016
+			Popularity		0.3
+			Retention		12
+			TimeScale		0.6
+			Iterative		1
+			IdealPrice		20
+			Submarkets		[ 4; 1; 1 ]
+			}
+			{
+			Name			"Text-to-image"
+			Description		"Type a sentence, get a masterpiece. Hands may vary"
+			Unlock			2022
+			Popularity		0.6
+			Retention		18
+			TimeScale		1
+			Iterative		1
+			IdealPrice		80
+			Submarkets		[ 2; 3; 2 ]
+			}
+			{
+			Name			"Text-to-video"
+			Description		"Like text-to-image, but it moves"
+			Unlock			2024
+			Popularity		0.65
+			Retention		18
+			TimeScale		1
+			Iterative		1
+			IdealPrice		120
+			Submarkets		[ 1; 2; 4 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		"Image model"
+			Spec		System
+			DevTime		6
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Style transfer"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"Diffusion engine"
+					Description "Start with noise, remove everything that isn't a cat"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2022
+					Submarkets	[ 2; 3; 2 ]
+					}
+					{
+					Name		"Inpainting"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2022
+					Submarkets	[ 1; 3; 1 ]
+					}
+					{
+					Name		"Consistent characters"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2024
+					Submarkets	[ 1; 3; 3 ]
+					}
+					{
+					Name				"Video frames"
+					DevTime				6
+					Level				2
+					CodeArt				1
+					Unlock				2024
+					SoftwareCategories	[ "Text-to-video" ]
+					Submarkets			[ 1; 2; 4 ]
+					}
+				]
+			}
+			{
+			Name			Editor
+			Spec			2D
+			DevTime			4
+			CodeArt			0.5
+			Dependencies	"2D Editor"
+			Submarkets		[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Layers and masks"
+					DevTime		3
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 0; 3; 1 ]
+					}
+					{
+					Name		"Prompt helper"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Unlock		2022
+					Submarkets	[ 3; 0; 1 ]
+					}
+					{
+					Name		"Upscaling"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 1; 2; 2 ]
+					}
+				]
+			}
+			{
+			Name				Sound
+			Spec				Audio
+			DevTime				3
+			CodeArt				0.5
+			Optional			True
+			SoftwareCategories	[ "Text-to-video" ]
+			Submarkets			[ 0; 1; 2 ]
+			Features
+				[
+					{
+					Name		"Generated soundtrack"
+					DevTime		3
+					Level		2
+					CodeArt		0.5
+					Submarkets	[ 1; 1; 3 ]
+					}
+					{
+					Name		"Lip sync"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 0; 2; 3 ]
+					}
+				]
+			}
+			{
+			Name		Cloud
+			Spec		Network
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Cloud rendering"
+					Server		0.001
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 1 ]
+					}
+					{
+					Name		"Team workspaces"
+					Server		0.0005
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 0; 1; 4 ]
+					}
+					{
+					Name		"Content watermarking"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 0; 1; 3 ]
+					}
+				]
+			}
+		]
+	}

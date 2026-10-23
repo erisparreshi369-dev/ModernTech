@@ -1,0 +1,25 @@
+-start(base)
+-base(base2,ext,stop)
+Dream
+Pixel
+Muse
+Canvas
+Prism
+Vivid
+Halo
+Lucid
+Mirage
+Fresco
+-base2(ext,stop)
+Forge
+Craft
+Gen
+Lens
+Brush
+ Studio
+-ext(stop)
+ Pro
+ XL
+ Motion
+ Lite
+ Ultra
