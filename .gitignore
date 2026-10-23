@@ -1,0 +1,20 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.directory
+.Trash-*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+
+# Build / temp (the game caches compiled .cs mods as .dcache)
+*.dcache
+*.tmp
+*.log
+/temp/
