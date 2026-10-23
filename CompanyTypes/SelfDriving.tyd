@@ -1,0 +1,16 @@
+CompanyType
+	{
+	Specialization		"Self-driving"
+	PerYear				0.15
+	Min					1
+	Max					3
+	Frameworks			False
+	NameGen				MT_Company
+	Types
+		[
+			{
+			Software	"Self-Driving Software"
+			Chance		1
+			}
+		]
+	}

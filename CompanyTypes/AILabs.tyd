@@ -1,0 +1,23 @@
+CompanyType
+	{
+	Specialization		"AI labs"
+	PerYear				0.25
+	Min					2
+	Max					5
+	NameGen				MT_Company
+	Types
+		[
+			{
+			Software	"AI Assistant"
+			Chance		1
+			}
+			{
+			Software	"Image Generator"
+			Chance		1
+			}
+			{
+			Software	"Coding Assistant"
+			Chance		1
+			}
+		]
+	}
