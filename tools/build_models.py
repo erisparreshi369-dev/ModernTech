@@ -212,13 +212,17 @@ def export_obj(obj, path):
                           forward_axis="NEGATIVE_Z", up_axis="Y")
 
 
-def render_thumbnail(obj, path):
+def render_thumbnail(objs, path, res=128, transparent=True):
+    if not isinstance(objs, list):
+        objs = [objs]
     scene = bpy.context.scene
     scene.render.engine = "BLENDER_WORKBENCH"
     scene.display.shading.light = "STUDIO"
     scene.display.shading.color_type = "MATERIAL"
-    scene.render.film_transparent = True
-    scene.render.resolution_x = scene.render.resolution_y = 128
+    scene.render.film_transparent = transparent
+    scene.world = scene.world or bpy.data.worlds.new("bg")
+    scene.world.color = (0.86, 0.88, 0.91)
+    scene.render.resolution_x = scene.render.resolution_y = res
     scene.render.image_settings.file_format = "PNG"
     scene.render.image_settings.color_mode = "RGBA"
     cam_data = bpy.data.cameras.new("thumb")
@@ -226,7 +230,7 @@ def render_thumbnail(obj, path):
     cam = bpy.data.objects.new("thumb", cam_data)
     scene.collection.objects.link(cam)
     scene.camera = cam
-    corners = [obj.matrix_world @ v.co for v in obj.data.vertices]
+    corners = [o.matrix_world @ v.co for o in objs for v in o.data.vertices]
     lo = [min(c[i] for c in corners) for i in range(3)]
     hi = [max(c[i] for c in corners) for i in range(3)]
     center = [(a + b) / 2 for a, b in zip(lo, hi)]
@@ -269,7 +273,38 @@ def main():
         dims = obj.dimensions
         assert max(dims) <= 2.0 + 1e-6, f"{name} must fit the 2x2x2 design cube, got {tuple(dims)}"
         export_obj(obj, os.path.join(folder, name.lower() + ".obj"))
+    render_previews()
     print("ModernTech models built")
+
+
+def render_previews():
+    """Steam Workshop preview image (Thumbnail.png) for each of the three packages."""
+    clear_scene()
+    pcs = []
+    for i, build in enumerate(FURNITURE.values()):
+        pcs.append(join(build(), "pc%d" % i))
+        pcs[-1].location = ((i % 2) * 1.5, (i // 2) * 1.0, 0)
+    render_thumbnail(pcs, os.path.join(FURN_DIR, "Thumbnail.png"), res=512, transparent=False)
+
+    clear_scene()
+    gpu = join(build_gpu(), "gpu")
+    gpu.rotation_euler.z = math.radians(-20)
+    cpu = join(build_cpu(), "cpu")
+    cpu.location = (2.6, 1.4, -0.4)
+    laptop = join(build_ultrabook(), "laptop")
+    laptop.scale = (4, 4, 4)
+    laptop.location = (1.0, -1.8, -1.0)
+    render_thumbnail([gpu, cpu, laptop], os.path.join(ROOT, "Thumbnail.png"), res=512, transparent=False)
+
+    clear_scene()
+    bars = [box((9 * 0.5, 1.0, 0.1), (2.0, 0, -0.05), "primary")]
+    for i in range(9):  # demand growing from 25% to 100%, same curve as the code mod
+        t = i / 8
+        h = 3 * (0.25 + 0.75 * t * t * (3 - 2 * t))
+        bars.append(box((0.35, 0.6, h), (i * 0.5, 0, h / 2), "glow"))
+    chart = join(bars, "chart")
+    render_thumbnail(chart, os.path.join(ROOT, "extras", "DLLMods", "ModernTechDemand", "Thumbnail.png"),
+                     res=512, transparent=False)
 
 
 main()

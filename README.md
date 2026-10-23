@@ -68,4 +68,23 @@ Without the code mod, every market has fixed demand. With it, each new category 
 
 ## For modders
 - `python3 tools/check_tyd.py` checks every TyD file for broken brackets and bad references.
-- `blender -b -P tools/build_models.py` rebuilds every model, texture and thumbnail.
+- `blender -b -P tools/build_models.py` rebuilds every model, texture, thumbnail and Workshop preview.
+- `tools/package.sh` builds clean, upload-ready copies of all three packages in `dist/`.
+
+## Publishing to the Steam Workshop
+The in-game uploader sends a mod's **whole folder**, so upload the clean copies from `dist/`, not this development folder.
+
+1. Run `tools/package.sh`.
+2. Put the `dist/` copies where the game looks for them, replacing the development versions for now:
+   - `dist/ModernTech` → `Mods/ModernTech` (move this repo folder somewhere else first)
+   - `dist/ModernTech PCs` → `Furniture/ModernTech PCs`
+   - `dist/ModernTechDemand` → `DLLMods/ModernTechDemand`
+3. In the game, open **Options > Mods**, pick each package and press upload.
+4. The game writes the new Workshop ID (`SteamID`) into each package's `meta.tyd`. Copy those `meta.tyd` files back into the repo and commit them, so future uploads update the same Workshop page. The code mod gets a new `meta.tyd`; keep it next to `ModernTechDemand.cs` in `extras/DLLMods/ModernTechDemand`.
+5. Put the development folders back.
+
+## License
+- **Code** (`tools/` and every `.cs` file): MIT
+- **Everything else** (data, models, textures, images, text): CC BY 4.0. Reuse it freely, as long as you credit "ModernTech by erisparreshi369-dev".
+
+See [LICENSE](LICENSE). Software Inc. belongs to Coredumping, and no game files are included.

@@ -19,3 +19,6 @@ desktop.ini
 *.tmp
 *.log
 /temp/
+
+# Upload-ready packages built by tools/package.sh
+/dist/
