@@ -1,0 +1,14 @@
+# Line endings and binary assets.
+#
+# tools/build_models.py writes models with LF. Without this file, core.autocrlf
+# checks them out as CRLF and every rebuild shows 22 modified files that contain
+# no real change. Declaring eol=lf keeps the working tree, the index and Blender
+# in agreement, so a rebuild is byte-identical unless the model actually changed.
+*.obj text eol=lf
+
+# Images and archives must never be line-ending converted or diffed as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.zip binary
+*.dll binary

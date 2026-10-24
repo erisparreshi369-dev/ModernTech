@@ -14,6 +14,7 @@ R = smoothness, G = glow when switched on, B = 1 to use the player's colors.
 """
 import math
 import os
+import struct
 
 import bpy
 
@@ -44,6 +45,28 @@ def block_uv(name):
     return ((i % GRID + 0.5) * cell, 1.0 - (i // GRID + 0.5) * cell)
 
 
+def clean_png(path):
+    """Drop metadata chunks so rebuilding is byte-for-byte reproducible.
+
+    Blender stamps the render date into a tEXt chunk, so without this every
+    rebuild rewrites all the images even when not a single pixel changed.
+    """
+    with open(path, "rb") as f:
+        data = f.read()
+    if data[:8] != b"\x89PNG\r\n\x1a\n":
+        return
+    out = [data[:8]]
+    i = 8
+    while i + 8 <= len(data):
+        length = struct.unpack(">I", data[i:i + 4])[0]
+        kind = data[i + 4:i + 8]
+        if kind not in (b"tEXt", b"iTXt", b"zTXt", b"tIME"):
+            out.append(data[i:i + 12 + length])
+        i += 12 + length
+    with open(path, "wb") as f:
+        f.write(b"".join(out))
+
+
 def write_textures(folder):
     os.makedirs(folder, exist_ok=True)
     for kind, chan in (("mt_albedo.png", 0), ("mt_extra.png", 1)):
@@ -60,6 +83,7 @@ def write_textures(folder):
         img.filepath_raw = os.path.join(folder, kind)
         img.file_format = "PNG"
         img.save()
+        clean_png(img.filepath_raw)
         bpy.data.images.remove(img)
 
 
@@ -410,6 +434,7 @@ def render_thumbnail(objs, path, res=128, transparent=True):
     cam_data.ortho_scale = size * 1.25
     scene.render.filepath = path
     bpy.ops.render.render(write_still=True)
+    clean_png(path)
     bpy.data.objects.remove(cam)
 
 
