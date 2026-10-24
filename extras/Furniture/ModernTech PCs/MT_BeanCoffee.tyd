@@ -17,7 +17,7 @@ Furniture
 		{
 		LocalizedName           "Bean-to-Cup Machine"
 		ButtonDescription       "Grinds fresh beans for every cup. Works like an espresso machine."
-		UnlockYear              2012
+		UnlockYear              2010
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Body

@@ -17,7 +17,7 @@ Furniture
 		{
 		LocalizedName           "Power Wall"
 		ButtonDescription       "A wall of modern battery packs. Works like a battery."
-		UnlockYear              2016
+		UnlockYear              2010
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Packs

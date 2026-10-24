@@ -24,7 +24,7 @@ SoftwareType
 			{
 			Name			"Live streaming"
 			Description		"Watch strangers play games, live, for hours"
-			Unlock			2011
+			Unlock			2010
 			Popularity		0.3
 			Retention		30
 			TimeScale		1
@@ -35,7 +35,7 @@ SoftwareType
 			{
 			Name			"Short video"
 			Description		"Fifteen seconds at a time, until it's 3 a.m."
-			Unlock			2016
+			Unlock			2010
 			Popularity		0.5
 			Retention		18
 			TimeScale		0.9
@@ -76,8 +76,32 @@ SoftwareType
 					DevTime		2
 					Level		2
 					CodeArt		0.6
-					Unlock		2015
+					Unlock		2010
 					Submarkets	[ 3; 0; 0 ]
+					}
+					{
+					Name		"Upload studio"
+					DevTime		3
+					Level		1
+					CodeArt		0.6
+					Submarkets	[ 0; 3; 0 ]
+					}
+					{
+					Name		"Live chat"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 2; 3; 0 ]
+					}
+					{
+					Name		Monetization
+					Description "Turns views into rent money, slowly"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2009
+					Submarkets	[ 0; 4; 2 ]
 					}
 				]
 			}
@@ -103,7 +127,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2014
+					Unlock		2010
 					Submarkets	[ 4; 1; 0 ]
 					}
 					{
@@ -112,7 +136,7 @@ SoftwareType
 					DevTime				4
 					Level				2
 					CodeArt				1
-					Unlock				2018
+					Unlock				2010
 					SoftwareCategories	[ "Live streaming" ]
 					Submarkets			[ 1; 4; 0 ]
 					}
@@ -149,40 +173,6 @@ SoftwareType
 					Level		1
 					CodeArt		1
 					Submarkets	[ 0; 1; 4 ]
-					}
-				]
-			}
-			{
-			Name		"Creator tools"
-			Spec		2D
-			DevTime		3
-			CodeArt		0.6
-			Submarkets	[ 0; 1; 0 ]
-			Features
-				[
-					{
-					Name		"Upload studio"
-					DevTime		3
-					Level		1
-					CodeArt		0.6
-					Submarkets	[ 0; 3; 0 ]
-					}
-					{
-					Name		"Live chat"
-					DevTime		2
-					Level		1
-					CodeArt		1
-					Unlock		2011
-					Submarkets	[ 2; 3; 0 ]
-					}
-					{
-					Name		Monetization
-					Description "Turns views into rent money, slowly"
-					DevTime		3
-					Level		2
-					CodeArt		1
-					Unlock		2009
-					Submarkets	[ 0; 4; 2 ]
 					}
 				]
 			}

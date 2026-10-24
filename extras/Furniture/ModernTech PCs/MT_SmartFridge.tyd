@@ -17,7 +17,7 @@ Furniture
 		{
 		LocalizedName           "Smart Fridge"
 		ButtonDescription       "A fridge with a screen on the door. Works like a fridge."
-		UnlockYear              2016
+		UnlockYear              2010
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Body

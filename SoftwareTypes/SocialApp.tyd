@@ -35,7 +35,7 @@ SoftwareType
 			{
 			Name			"Short video"
 			Description		"Fifteen seconds at a time, five hours a day"
-			Unlock			2016
+			Unlock			2010
 			Popularity		0.75
 			Retention		12
 			TimeScale		0.8
@@ -68,7 +68,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2012
+					Unlock		2010
 					Submarkets	[ 1; 2; 4 ]
 					}
 					{
@@ -76,7 +76,7 @@ SoftwareType
 					DevTime		2
 					Level		1
 					CodeArt		1
-					Unlock		2016
+					Unlock		2010
 					Submarkets	[ 3; 2; 1 ]
 					}
 					{
@@ -84,7 +84,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2021
+					Unlock		2010
 					Submarkets	[ 3; 1; 1 ]
 					}
 				]
@@ -111,7 +111,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		0.5
-					Unlock		2016
+					Unlock		2010
 					Submarkets	[ 0; 4; 1 ]
 					}
 					{
@@ -126,7 +126,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2015
+					Unlock		2010
 					Submarkets	[ 3; 3; 1 ]
 					}
 				]
@@ -153,7 +153,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2016
+					Unlock		2010
 					Submarkets	[ 1; 4; 2 ]
 					}
 					{

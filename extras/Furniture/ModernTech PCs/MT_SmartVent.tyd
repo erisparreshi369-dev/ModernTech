@@ -17,7 +17,7 @@ Furniture
 		{
 		LocalizedName           "Smart Vent"
 		ButtonDescription       "A wall vent with a lit ring. Works like ventilation."
-		UnlockYear              2015
+		UnlockYear              2010
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Body

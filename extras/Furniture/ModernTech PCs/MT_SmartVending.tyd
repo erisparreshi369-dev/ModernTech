@@ -17,7 +17,7 @@ Furniture
 		{
 		LocalizedName           "Smart Vending Machine"
 		ButtonDescription       "Tap to pay, touch screen, same snacks. Works like a vending machine."
-		UnlockYear              2015
+		UnlockYear              2010
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Body

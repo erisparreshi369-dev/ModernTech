@@ -19,7 +19,7 @@ Furniture
 		ButtonDescription       "An office AI on the wall. Answers questions and drafts the boring parts, so everyone in the room works faster and better."
 		Cost                    15000
 		Wattage                 300
-		UnlockYear              2023
+		UnlockYear              2010
 		AuraValues              [ 0.15; 0.1; 0.05 ]
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"

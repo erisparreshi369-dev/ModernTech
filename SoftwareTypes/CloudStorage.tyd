@@ -24,7 +24,7 @@ SoftwareType
 			{
 			Name			"Team drive"
 			Description		"One folder for the whole office, finally"
-			Unlock			2012
+			Unlock			2010
 			Popularity		0.25
 			Retention		48
 			TimeScale		1
@@ -78,6 +78,30 @@ SoftwareType
 					CodeArt		1
 					Submarkets	[ 3; 2; 0 ]
 					}
+					{
+					Name		"Encryption at rest"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 3; 2 ]
+					}
+					{
+					Name		"Zero-knowledge encryption"
+					Description "Not even we can read your files. Promise"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 3; 2; 1 ]
+					}
+					{
+					Name		"Two-factor login"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 2; 3; 1 ]
+					}
 				]
 			}
 			{
@@ -111,7 +135,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2011
+					Unlock		2010
 					Submarkets	[ 1; 3; 2 ]
 					}
 					{
@@ -122,41 +146,6 @@ SoftwareType
 					CodeArt				1
 					SoftwareCategories	[ "Object storage" ]
 					Submarkets			[ 0; 0; 4 ]
-					}
-				]
-			}
-			{
-			Name			Security
-			Spec			System
-			DevTime			3
-			CodeArt			1
-			Dependencies	"Coding Assistant"
-			Submarkets		[ 1; 1; 1 ]
-			Features
-				[
-					{
-					Name		"Encryption at rest"
-					DevTime		3
-					Level		1
-					CodeArt		1
-					Submarkets	[ 1; 3; 2 ]
-					}
-					{
-					Name		"Zero-knowledge encryption"
-					Description "Not even we can read your files. Promise"
-					DevTime		5
-					Level		2
-					CodeArt		1
-					Unlock		2014
-					Submarkets	[ 3; 2; 1 ]
-					}
-					{
-					Name		"Two-factor login"
-					DevTime		2
-					Level		1
-					CodeArt		1
-					Unlock		2012
-					Submarkets	[ 2; 3; 1 ]
 					}
 				]
 			}

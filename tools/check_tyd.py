@@ -31,10 +31,11 @@ def values(block, key):
     return out
 
 
-files = sorted(ROOT.rglob('*.tyd'))
+files = sorted(p for p in ROOT.rglob('*.tyd') if 'dist' not in p.relative_to(ROOT).parts)
 gens = BUILTIN_GENS | {p.stem for p in (ROOT / 'NameGenerators').glob('*.txt')}
 designs = BUILTIN_DESIGNS | {d for f in files if 'HardwareDesign' in f.parts for d in values(f.read_text(), 'ID')}
 types = set(BUILTIN_TYPES)
+deps = []  # (file, software type, tool type), checked once every type is known
 
 for f in files:
     t = f.read_text()
@@ -64,6 +65,20 @@ for f in files:
     for d in values(t, 'Design'):
         if d not in designs:
             errors.append(f"{f.name}: unknown hardware design '{d}'")
+    # Rules from the game's GameData.CheckForErrors: one spec per main feature group, the Hardware spec only on
+    # Console/Phone apps, no zero dev times, tools must be other software types
+    specs = re.findall(r'(?m)^\t{3}Spec\s+"?([^"\n]+?)"?\s*$', feats)
+    for sp in {sp for sp in specs if specs.count(sp) > 1}:
+        errors.append(f"{f.name}: spec '{sp}' is used by more than one main feature group")
+    if 'Hardware' in specs and set(values(head, 'OSSupport')) - {'Console', 'Phone'}:
+        errors.append(f"{f.name}: Hardware spec is only supported on Console and Phone operating systems")
+    if any(float(v) == 0 for v in values(feats, 'DevTime')):
+        errors.append(f"{f.name}: a feature has zero DevTime")
+    deps += [(f.name, values(t, 'Name')[0], d) for d in values(feats, 'Dependencies')]
+
+for fname, sw, d in deps:
+    if d == sw or d not in types:
+        errors.append(f"{fname}: Dependencies '{d}' must be another existing software type")
 
 for f in (ROOT / 'CompanyTypes').glob('*.tyd'):
     t = f.read_text()

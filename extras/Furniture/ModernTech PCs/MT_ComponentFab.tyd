@@ -17,7 +17,7 @@ Furniture
 		{
 		LocalizedName           "Rapid Component Fab"
 		ButtonDescription       "Makes hardware components twice as fast as a component printer, and cheaper."
-		UnlockYear              2018
+		UnlockYear              2010
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Body

@@ -32,19 +32,19 @@ The game loads data, furniture and code mods from different folders, so ModernTe
 ### Software (with AI competitors)
 | Type | Categories (unlock year) |
 |---|---|
-| AI Assistant | Voice assistant (2011), Chat assistant (2022), Personal agent (2026) |
-| Image Generator | Photo filter app (2016), Text-to-image (2022), Text-to-video (2024) |
-| Coding Assistant | Smart autocomplete (2018), AI pair programmer (2021), Coding agent (2025) |
-| Self-Driving Software | Driver assistance (2008), Robotaxi (2020) |
-| Social App | Social network (2004), Photo sharing (2010), Short video (2016) |
+| AI Assistant | Voice assistant (2010), Chat assistant (2010), Personal agent (2010) |
+| Image Generator | Photo filter app (2010), Text-to-image (2010), Text-to-video (2010) |
+| Coding Assistant | Smart autocomplete (2010), AI pair programmer (2010), Coding agent (2010) |
+| Self-Driving Software | Driver assistance (2008), Robotaxi (2010) |
+| Social App | Social network (2004), Photo sharing (2010), Short video (2010) |
 | Messaging App | Instant messenger (1996), Mobile messenger (2009) |
-| Mobile Wallet | Mobile banking (2009), Tap to pay (2014) |
-| Fitness App | Step tracker (2009), Health coach (2018) |
-| Cloud Storage | Object storage (2006), File sync (2007), Team drive (2012) |
-| Video Streaming | Video on demand (2007), Live streaming (2011), Short video (2016) |
-| Smart Home Hub | Home automation (2012), Home security (2014), Energy manager (2017) |
+| Mobile Wallet | Mobile banking (2009), Tap to pay (2010) |
+| Fitness App | Step tracker (2009), Health coach (2010) |
+| Cloud Storage | Object storage (2006), File sync (2007), Team drive (2010) |
+| Video Streaming | Video on demand (2007), Live streaming (2010), Short video (2010) |
+| Smart Home Hub | Home automation (2010), Home security (2010), Energy manager (2010) |
 
-Every product has 3 to 4 feature groups. Two new company types, **Cloud services** and **Smart devices**, compete in the new markets.
+Every product has 3 to 4 feature groups. Everything ModernTech adds is available by 2010 at the latest. Two new company types, **Cloud services** and **Smart devices**, compete in the new markets.
 
 ### Build your own AI tools
 Coding Assistant and Image Generator can be made **in-house**. Code-heavy feature groups (System) in ModernTech products list the Coding Assistant as a tool, and art-heavy groups (2D) list the Image Generator, the same way vanilla games use a 2D Editor. Make your own, then pick it as the tool when you design a product. Your teams get its help, and you pay no license to a competitor.
@@ -52,10 +52,10 @@ Coding Assistant and Image Generator can be made **in-house**. Code-heavy featur
 ### Hardware products (designed, manufactured and sold by your company)
 | Type | Categories (unlock year) |
 |---|---|
-| Graphics Card | 3D accelerator (1996), Gaming GPU (2000), AI accelerator (2017) |
+| Graphics Card | 3D accelerator (1996), Gaming GPU (2000), AI accelerator (2010) |
 | Processor | Desktop CPU (1982), Server CPU (1995), Mobile chip (2007) |
-| VR Headset | PC VR headset (2016), Standalone headset (2019), Mixed reality headset (2023) |
-| Smartwatch | Fitness band (2009), Smart watch (2014), Health watch (2020) |
+| VR Headset | PC VR headset (2010), Standalone headset (2010), Mixed reality headset (2010) |
+| Smartwatch | Fitness band (2009), Smart watch (2010), Health watch (2010) |
 
 Each has its own 3D product design.
 
@@ -63,24 +63,24 @@ Each has its own 3D product design.
 | Furniture | Unlock | Speed vs. normal PC | Power use |
 |---|---|---|---|
 | Mini PC | 2010 | 90% | 300 W |
-| Ultrabook | 2012 | 90% | 200 W |
-| Workstation Tower | 2012 | 115% | 1000 W |
-| AI Workstation | 2023 | 140% | 1800 W |
-| VR Dev Station | 2016 | 120% | 900 W |
-| Ultrawide Workstation | 2018 | 120% | 600 W |
+| Ultrabook | 2010 | 90% | 200 W |
+| Workstation Tower | 2010 | 115% | 1000 W |
+| AI Workstation | 2010 | 140% | 1800 W |
+| VR Dev Station | 2010 | 120% | 900 W |
+| Ultrawide Workstation | 2010 | 120% | 600 W |
 
 The case, accent and light colors can be changed in-game. They upgrade like the vanilla computers.
 
 ### More furniture (same package)
 | Furniture | Unlock | What it does |
 |---|---|---|
-| AI Assistant Panel | 2023 | Wall screen. Everyone in the room gets +15% effectiveness, +10% skill and +5% mood |
+| AI Assistant Panel | 2010 | Wall screen. Everyone in the room gets +15% effectiveness, +10% skill and +5% mood |
 | Blade Server Rack | 2008 | Server Rack footprint, 3x the power (15,000) |
-| AI Server Cluster | 2022 | Big Server Rack footprint, 3x the power (150,000) |
-| Industrial Product Printer | 2015 | 2x the speed of a Large Product Printer, 2x per load, cheaper copies |
-| Rapid Component Fab | 2018 | 2x the speed of a Component Printer, cheaper |
-| Smart Fridge, Induction Stove, Bean-to-Cup Machine, Smart Vending Machine | 2010-2016 | Kitchen: work like the vanilla Fridge, Stove, Espresso Machine and Vending Machine |
-| Heat Pump Heater, Power Wall, Smart Vent | 2014-2016 | Utility: work like the vanilla Small Heater, Battery and Ventilation |
+| AI Server Cluster | 2010 | Big Server Rack footprint, 3x the power (150,000) |
+| Industrial Product Printer | 2010 | 2x the speed of a Large Product Printer, 2x per load, cheaper copies |
+| Rapid Component Fab | 2010 | 2x the speed of a Component Printer, cheaper |
+| Smart Fridge, Induction Stove, Bean-to-Cup Machine, Smart Vending Machine | 2010 | Kitchen: work like the vanilla Fridge, Stove, Espresso Machine and Vending Machine |
+| Heat Pump Heater, Power Wall, Smart Vent | 2010 | Utility: work like the vanilla Small Heater, Battery and Ventilation |
 
 ### Personalities
 - **Gadgeteer**: RGB Thumb + Forgetful

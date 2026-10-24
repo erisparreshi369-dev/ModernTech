@@ -2,7 +2,7 @@ SoftwareType
 	{
 	Name			"Coding Assistant"
 	Description		"Writes code so your programmers can write more code"
-	Unlock			2018
+	Unlock			2010
 	Random			0.1
 	OptimalDevTime	40
 	SubmarketNames	[ Beginners; Professionals; Enterprise ]
@@ -14,7 +14,7 @@ SoftwareType
 			{
 			Name			"Smart autocomplete"
 			Description		"Finishes your lines before you do"
-			Unlock			2018
+			Unlock			2010
 			Popularity		0.25
 			Retention		24
 			TimeScale		0.7
@@ -25,7 +25,7 @@ SoftwareType
 			{
 			Name			"AI pair programmer"
 			Description		"A colleague who never takes a coffee break"
-			Unlock			2021
+			Unlock			2010
 			Popularity		0.45
 			Retention		18
 			TimeScale		1
@@ -36,7 +36,7 @@ SoftwareType
 			{
 			Name			"Coding agent"
 			Description		"Give it a ticket, get back a pull request"
-			Unlock			2025
+			Unlock			2010
 			Popularity		0.55
 			Retention		18
 			TimeScale		1
@@ -67,7 +67,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2021
+					Unlock		2010
 					Submarkets	[ 2; 3; 1 ]
 					}
 					{
@@ -76,7 +76,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2023
+					Unlock		2010
 					Submarkets	[ 1; 3; 2 ]
 					}
 					{
@@ -84,7 +84,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2023
+					Unlock		2010
 					Submarkets	[ 0; 2; 4 ]
 					}
 					{
@@ -92,7 +92,7 @@ SoftwareType
 					DevTime				6
 					Level				2
 					CodeArt				1
-					Unlock				2025
+					Unlock				2010
 					SoftwareCategories	[ "Coding agent" ]
 					Submarkets			[ 0; 3; 4 ]
 					}
@@ -101,7 +101,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2023
+					Unlock		2010
 					Submarkets	[ 1; 3; 3 ]
 					}
 				]
@@ -134,7 +134,7 @@ SoftwareType
 					DevTime		2
 					Level		1
 					CodeArt		0.5
-					Unlock		2023
+					Unlock		2010
 					Submarkets	[ 3; 1; 1 ]
 					}
 					{
@@ -143,7 +143,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2025
+					Unlock		2010
 					Submarkets	[ 0; 4; 2 ]
 					}
 				]
@@ -176,7 +176,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2020
+					Unlock		2010
 					Submarkets	[ 0; 1; 4 ]
 					}
 				]

@@ -13,7 +13,7 @@ SoftwareType
 			{
 			Name			"Home automation"
 			Description		"Lights, blinds and kettle, all on a schedule"
-			Unlock			2012
+			Unlock			2010
 			Popularity		0.25
 			Retention		36
 			TimeScale		0.9
@@ -24,7 +24,7 @@ SoftwareType
 			{
 			Name			"Home security"
 			Description		"See who's at the door before you pretend you're not home"
-			Unlock			2014
+			Unlock			2010
 			Popularity		0.2
 			Retention		48
 			TimeScale		1
@@ -35,7 +35,7 @@ SoftwareType
 			{
 			Name			"Energy manager"
 			Description		"Runs the dishwasher when power is cheap"
-			Unlock			2017
+			Unlock			2010
 			Popularity		0.15
 			Retention		48
 			TimeScale		1
@@ -66,7 +66,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2013
+					Unlock		2010
 					Submarkets	[ 2; 2; 2 ]
 					}
 					{
@@ -75,8 +75,30 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2022
+					Unlock		2010
 					Submarkets	[ 4; 1; 1 ]
+					}
+					{
+					Name		"Camera feeds"
+					Server		0.001
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name		"Smart locks"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 2; 3; 0 ]
+					}
+					{
+					Name		"Intruder alerts"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 0; 4; 0 ]
 					}
 				]
 			}
@@ -102,7 +124,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2015
+					Unlock		2010
 					Submarkets	[ 4; 1; 1 ]
 					}
 					{
@@ -110,7 +132,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2017
+					Unlock		2010
 					Submarkets	[ 2; 2; 3 ]
 					}
 					{
@@ -120,38 +142,6 @@ SoftwareType
 					CodeArt				1
 					SoftwareCategories	[ "Energy manager" ]
 					Submarkets			[ 0; 0; 4 ]
-					}
-				]
-			}
-			{
-			Name		Security
-			Spec		System
-			DevTime		4
-			CodeArt		1
-			Submarkets	[ 0; 1; 0 ]
-			Features
-				[
-					{
-					Name		"Camera feeds"
-					Server		0.001
-					DevTime		3
-					Level		1
-					CodeArt		1
-					Submarkets	[ 1; 4; 0 ]
-					}
-					{
-					Name		"Smart locks"
-					DevTime		3
-					Level		2
-					CodeArt		1
-					Submarkets	[ 2; 3; 0 ]
-					}
-					{
-					Name		"Intruder alerts"
-					DevTime		2
-					Level		1
-					CodeArt		1
-					Submarkets	[ 0; 4; 0 ]
 					}
 				]
 			}
@@ -184,7 +174,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2016
+					Unlock		2010
 					Submarkets	[ 3; 1; 1 ]
 					}
 				]

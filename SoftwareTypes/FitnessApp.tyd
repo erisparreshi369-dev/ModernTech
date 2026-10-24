@@ -24,7 +24,7 @@ SoftwareType
 			{
 			Name			"Health coach"
 			Description		"A personal trainer that never gets tired of you"
-			Unlock			2018
+			Unlock			2010
 			Popularity		0.35
 			Retention		18
 			TimeScale		0.8
@@ -63,7 +63,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2014
+					Unlock		2010
 					Submarkets	[ 1; 0; 4 ]
 					}
 					{
@@ -71,7 +71,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2015
+					Unlock		2010
 					Submarkets	[ 0; 4; 2 ]
 					}
 					{
@@ -79,7 +79,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2015
+					Unlock		2010
 					Submarkets	[ 2; 3; 3 ]
 					}
 				]
@@ -113,7 +113,7 @@ SoftwareType
 					DevTime				4
 					Level				2
 					CodeArt				1
-					Unlock				2023
+					Unlock				2010
 					SoftwareCategories	[ "Health coach" ]
 					Submarkets			[ 3; 2; 2 ]
 					}
@@ -148,7 +148,7 @@ SoftwareType
 					DevTime		3
 					Level		1
 					CodeArt		1
-					Unlock		2012
+					Unlock		2010
 					Submarkets	[ 3; 2; 0 ]
 					}
 				]
@@ -167,7 +167,7 @@ SoftwareType
 					DevTime		2
 					Level		1
 					CodeArt		0.5
-					Unlock		2012
+					Unlock		2010
 					Submarkets	[ 3; 2; 0 ]
 					}
 					{

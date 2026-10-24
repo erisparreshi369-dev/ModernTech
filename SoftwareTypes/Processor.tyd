@@ -139,7 +139,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2017
+					Unlock		2010
 					Submarkets	[ 2; 1; 3 ]
 					}
 					{
@@ -147,7 +147,7 @@ SoftwareType
 					DevTime		5
 					Level		2
 					CodeArt		1
-					Unlock		2019
+					Unlock		2010
 					Submarkets	[ 0; 2; 4 ]
 					}
 					{
@@ -156,19 +156,9 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2022
+					Unlock		2010
 					Submarkets	[ 1; 4; 2 ]
 					}
-				]
-			}
-			{
-			Name		"Chip process"
-			Spec		Hardware
-			DevTime		4
-			CodeArt		1
-			Submarkets	[ 1; 1; 1 ]
-			Features
-				[
 					{
 					Name		"Die shrink"
 					DevTime		3
@@ -181,7 +171,7 @@ SoftwareType
 					DevTime		5
 					Level		2
 					CodeArt		1
-					Unlock		2011
+					Unlock		2010
 					Submarkets	[ 2; 3; 3 ]
 					}
 					{
@@ -189,13 +179,13 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2020
+					Unlock		2010
 					Submarkets	[ 0; 2; 4 ]
 					}
 				]
 			}
 			{
-			Name		"Power management"
+			Name		Firmware
 			Spec		System
 			Dependencies	"Coding Assistant"
 			DevTime		3
@@ -223,7 +213,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2021
+					Unlock		2010
 					Submarkets	[ 3; 1; 1 ]
 					}
 					{
@@ -234,24 +224,12 @@ SoftwareType
 					Unlock		2004
 					Submarkets	[ 3; 1; 2 ]
 					}
-				]
-			}
-			{
-			Name		Security
-			Spec		System
-			Dependencies	"Coding Assistant"
-			DevTime		2
-			CodeArt		1
-			Optional	True
-			Submarkets	[ 1; 0; 2 ]
-			Features
-				[
 					{
 					Name		"Secure enclave"
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2013
+					Unlock		2010
 					Submarkets	[ 1; 0; 3 ]
 					}
 					{
@@ -259,7 +237,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2017
+					Unlock		2010
 					Submarkets	[ 0; 0; 4 ]
 					}
 				]

@@ -24,7 +24,7 @@ SoftwareType
 			{
 			Name			"Robotaxi"
 			Description		"No driver, no small talk"
-			Unlock			2020
+			Unlock			2010
 			Popularity		0.4
 			Retention		48
 			TimeScale		1
@@ -55,7 +55,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2012
+					Unlock		2010
 					Submarkets	[ 4; 0; 2 ]
 					}
 					{
@@ -63,7 +63,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2014
+					Unlock		2010
 					Submarkets	[ 3; 1; 1 ]
 					}
 					{
@@ -72,7 +72,7 @@ SoftwareType
 					DevTime		5
 					Level		2
 					CodeArt		1
-					Unlock		2016
+					Unlock		2010
 					Submarkets	[ 3; 0; 3 ]
 					}
 					{
@@ -81,7 +81,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2019
+					Unlock		2010
 					Submarkets	[ 4; 2; 2 ]
 					}
 				]
@@ -122,7 +122,7 @@ SoftwareType
 					DevTime				6
 					Level				2
 					CodeArt				1
-					Unlock				2020
+					Unlock				2010
 					SoftwareCategories	[ Robotaxi ]
 					Submarkets			[ 2; 2; 4 ]
 					}
@@ -131,7 +131,7 @@ SoftwareType
 					DevTime		5
 					Level		2
 					CodeArt		1
-					Unlock		2015
+					Unlock		2010
 					Submarkets	[ 2; 4; 2 ]
 					}
 				]
@@ -150,7 +150,7 @@ SoftwareType
 					DevTime		3
 					Level		1
 					CodeArt		1
-					Unlock		2012
+					Unlock		2010
 					Submarkets	[ 2; 1; 2 ]
 					}
 					{
@@ -159,7 +159,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2016
+					Unlock		2010
 					Submarkets	[ 2; 2; 3 ]
 					}
 					{
@@ -168,7 +168,7 @@ SoftwareType
 					DevTime				4
 					Level				2
 					CodeArt				1
-					Unlock				2020
+					Unlock				2010
 					SoftwareCategories	[ Robotaxi ]
 					Submarkets			[ 0; 0; 4 ]
 					}
@@ -189,7 +189,7 @@ SoftwareType
 					DevTime		2
 					Level		1
 					CodeArt		1
-					Unlock		2012
+					Unlock		2010
 					Submarkets	[ 0; 3; 1 ]
 					}
 					{
@@ -197,7 +197,7 @@ SoftwareType
 					DevTime		2
 					Level		1
 					CodeArt		1
-					Unlock		2018
+					Unlock		2010
 					Submarkets	[ 3; 1; 1 ]
 					}
 					{
@@ -205,7 +205,7 @@ SoftwareType
 					DevTime				3
 					Level				1
 					CodeArt				0.5
-					Unlock				2020
+					Unlock				2010
 					SoftwareCategories	[ Robotaxi ]
 					Submarkets			[ 0; 2; 4 ]
 					}

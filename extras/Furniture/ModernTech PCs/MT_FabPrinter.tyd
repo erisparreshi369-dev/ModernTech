@@ -17,7 +17,7 @@ Furniture
 		{
 		LocalizedName           "Industrial Product Printer"
 		ButtonDescription       "Prints twice as fast as a large printer, twice as much per load, and for less money per copy."
-		UnlockYear              2015
+		UnlockYear              2010
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Frame

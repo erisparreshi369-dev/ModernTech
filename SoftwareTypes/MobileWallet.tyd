@@ -24,7 +24,7 @@ SoftwareType
 			{
 			Name			"Tap to pay"
 			Description		"Wave your phone, lose your money faster"
-			Unlock			2014
+			Unlock			2010
 			Popularity		0.55
 			Retention		36
 			TimeScale		0.9
@@ -56,7 +56,7 @@ SoftwareType
 					DevTime		2
 					Level		1
 					CodeArt		1
-					Unlock		2013
+					Unlock		2010
 					Submarkets	[ 3; 2; 0 ]
 					}
 					{
@@ -66,7 +66,7 @@ SoftwareType
 					DevTime		4
 					Level		2
 					CodeArt		1
-					Unlock		2016
+					Unlock		2010
 					Submarkets	[ 1; 2; 3 ]
 					}
 					{
@@ -74,7 +74,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2014
+					Unlock		2010
 					Submarkets	[ 1; 2; 3 ]
 					}
 				]
@@ -100,7 +100,7 @@ SoftwareType
 					DevTime		3
 					Level		1
 					CodeArt		1
-					Unlock		2013
+					Unlock		2010
 					Submarkets	[ 4; 1; 0 ]
 					}
 					{
@@ -108,7 +108,7 @@ SoftwareType
 					DevTime				4
 					Level				2
 					CodeArt				1
-					Unlock				2014
+					Unlock				2010
 					SoftwareCategories	[ "Tap to pay" ]
 					Submarkets			[ 3; 0; 4 ]
 					}
@@ -117,7 +117,7 @@ SoftwareType
 					DevTime		2
 					Level		1
 					CodeArt		1
-					Unlock		2017
+					Unlock		2010
 					Submarkets	[ 2; 0; 4 ]
 					}
 					{
@@ -126,7 +126,7 @@ SoftwareType
 					DevTime		3
 					Level		2
 					CodeArt		1
-					Unlock		2019
+					Unlock		2010
 					Submarkets	[ 4; 0; 2 ]
 					}
 				]
