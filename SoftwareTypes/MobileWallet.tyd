@@ -39,6 +39,7 @@ SoftwareType
 			Name		Security
 			Spec		System
 			Dependencies	"Coding Assistant"
+			Optional		True
 			DevTime		4
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -135,6 +136,7 @@ SoftwareType
 			Name		Interface
 			Spec		2D
 			Dependencies	"Image Generator"
+			Optional		True
 			DevTime		3
 			CodeArt		0.5
 			Submarkets	[ 1; 2; 1 ]

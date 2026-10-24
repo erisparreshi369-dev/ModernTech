@@ -50,7 +50,6 @@ SoftwareType
 			{
 			Name		"Image model"
 			Spec		System
-			Dependencies	"Coding Assistant"
 			DevTime		6
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -113,7 +112,6 @@ SoftwareType
 			Spec			2D
 			DevTime			4
 			CodeArt			0.5
-			Dependencies	"2D Editor"
 			Submarkets		[ 1; 1; 1 ]
 			Features
 				[

@@ -90,6 +90,7 @@ SoftwareType
 			Name		"Driving logic"
 			Spec		System
 			Dependencies	"Coding Assistant"
+			Optional		True
 			DevTime		8
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -178,6 +179,7 @@ SoftwareType
 			Name		Cabin
 			Spec		2D
 			Dependencies	"Image Generator"
+			Optional		True
 			DevTime		3
 			CodeArt		0.5
 			Optional	True

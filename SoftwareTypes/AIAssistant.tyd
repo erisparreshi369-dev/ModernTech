@@ -51,6 +51,7 @@ SoftwareType
 			Name		"Language model"
 			Spec		System
 			Dependencies	"Coding Assistant"
+			Optional		True
 			Description "The brain of the operation"
 			DevTime		6
 			CodeArt		1
@@ -149,6 +150,7 @@ SoftwareType
 			Name		Interface
 			Spec		2D
 			Dependencies	"Image Generator"
+			Optional		True
 			DevTime		3
 			CodeArt		0.5
 			Submarkets	[ 1; 1; 1 ]

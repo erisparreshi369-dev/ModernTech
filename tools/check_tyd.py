@@ -75,10 +75,21 @@ for f in files:
     if any(float(v) == 0 for v in values(feats, 'DevTime')):
         errors.append(f"{f.name}: a feature has zero DevTime")
     deps += [(f.name, values(t, 'Name')[0], d) for d in values(feats, 'Dependencies')]
+    # A group whose tool doesn't exist yet can't be developed, so tool groups must be optional,
+    # and every type needs one forced group (the game requires it)
+    mains = re.split(r'(?m)^\t{3}\{\s*$', feats)[1:]
+    if all(re.search(r'(?m)^\t{3}Optional\s+True', g) for g in mains):
+        errors.append(f"{f.name}: needs at least one main feature group that isn't Optional")
+    for g in mains:
+        if re.search(r'(?m)^\t{3}Dependencies\s', g) and not re.search(r'(?m)^\t{3}Optional\s+True', g):
+            errors.append(f"{f.name}: a main feature group with Dependencies must be Optional True")
 
+tool_types = {d for _, _, d in deps}
 for fname, sw, d in deps:
     if d == sw or d not in types:
         errors.append(f"{fname}: Dependencies '{d}' must be another existing software type")
+    if sw in tool_types:
+        errors.append(f"{fname}: {sw} is used as a tool, so it can't need a tool itself (nothing could be built first)")
 
 for f in (ROOT / 'CompanyTypes').glob('*.tyd'):
     t = f.read_text()

@@ -232,6 +232,7 @@ SoftwareType
 			Name		Drivers
 			Spec		System
 			Dependencies	"Coding Assistant"
+			Optional		True
 			DevTime		4
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]

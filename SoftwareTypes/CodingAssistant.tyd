@@ -109,7 +109,6 @@ SoftwareType
 			{
 			Name		"Editor integration"
 			Spec		2D
-			Dependencies	"Image Generator"
 			DevTime		3
 			CodeArt		0.7
 			Submarkets	[ 1; 1; 1 ]

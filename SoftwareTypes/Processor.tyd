@@ -188,6 +188,7 @@ SoftwareType
 			Name		Firmware
 			Spec		System
 			Dependencies	"Coding Assistant"
+			Optional		True
 			DevTime		3
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]

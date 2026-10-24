@@ -231,6 +231,7 @@ SoftwareType
 			DevTime			4
 			CodeArt			1
 			Dependencies	"Coding Assistant"
+			Optional		True
 			Submarkets		[ 1; 1; 1 ]
 			Features
 				[
@@ -265,6 +266,7 @@ SoftwareType
 			Name		"Watch faces"
 			Spec		2D
 			Dependencies	"Image Generator"
+			Optional		True
 			DevTime		3
 			CodeArt		0.5
 			Submarkets	[ 1; 1; 0 ]

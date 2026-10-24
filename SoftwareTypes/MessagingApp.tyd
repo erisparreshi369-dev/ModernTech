@@ -39,6 +39,7 @@ SoftwareType
 			Name		Chat
 			Spec		System
 			Dependencies	"Coding Assistant"
+			Optional		True
 			DevTime		4
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -153,6 +154,7 @@ SoftwareType
 			Name		Interface
 			Spec		2D
 			Dependencies	"Image Generator"
+			Optional		True
 			DevTime		2
 			CodeArt		0.4
 			Submarkets	[ 2; 1; 0 ]

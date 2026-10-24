@@ -224,6 +224,7 @@ SoftwareType
 			DevTime			5
 			CodeArt			1
 			Dependencies	"Coding Assistant"
+			Optional		True
 			Submarkets		[ 1; 1; 1 ]
 			Features
 				[

@@ -52,6 +52,7 @@ SoftwareType
 			DevTime			6
 			CodeArt			1
 			Dependencies	"Coding Assistant"
+			Optional		True
 			Submarkets		[ 1; 1; 1 ]
 			Features
 				[
@@ -155,6 +156,7 @@ SoftwareType
 			DevTime			3
 			CodeArt			0.5
 			Dependencies	"Image Generator"
+			Optional		True
 			Submarkets		[ 1; 1; 0 ]
 			Features
 				[

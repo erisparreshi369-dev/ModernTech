@@ -47,7 +47,11 @@ The game loads data, furniture and code mods from different folders, so ModernTe
 Every product has 3 to 4 feature groups. Everything ModernTech adds is available by 2010 at the latest. Two new company types, **Cloud services** and **Smart devices**, compete in the new markets.
 
 ### Build your own AI tools
-Coding Assistant and Image Generator can be made **in-house**. Code-heavy feature groups (System) in ModernTech products list the Coding Assistant as a tool, and art-heavy groups (2D) list the Image Generator, the same way vanilla games use a 2D Editor. Make your own, then pick it as the tool when you design a product. Your teams get its help, and you pay no license to a competitor.
+Coding Assistant and Image Generator can be made **in-house**, and they work as tools, the way vanilla games use a 2D Editor:
+- In every other ModernTech product, the code group (System spec) uses a Coding Assistant and the art group (2D spec) uses an Image Generator.
+- These groups are optional. When you design a product, add the group and pick your own AI as its tool, or license a competitor's.
+- The tool's tech level caps how advanced the features in that group can be, so a better AI lets your team build better products. Your own tool costs no license.
+- Until anyone has released an AI tool, those groups can't be added, but the product can still be developed without them.
 
 ### Hardware products (designed, manufactured and sold by your company)
 | Type | Categories (unlock year) |
