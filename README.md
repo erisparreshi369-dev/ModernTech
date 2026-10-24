@@ -105,6 +105,8 @@ Without the code mod, every market has fixed demand. With it, each new category 
 
 ## For modders
 - The code mods are plain `.cs` files the game compiles itself. Bind the debug console in Options > Keys, then use `RECOMPILE_DLL_MOD` and `RELOAD_DLL_MOD` to try a change without restarting the game.
+- The game's script compiler references `Assembly-CSharp` and Unity's core modules only. The IMGUI types (`GUI`, `GUIStyle`, `TextAnchor`, `GUI.skin`) are **not** available and using them fails the whole code mod with `CS246`, so draw nothing yourself: use `WindowManager.Instance.ShowMessageBox(...)` or `Debug.Log` for feedback.
+- Data and furniture packages are picked up from `Mods/` and `Furniture/` as soon as they are there. Code mods also need `<DLLMods>\<folder name>Setting.txt` containing `[Active]` then `True`, or they load but never activate.
 - `python3 tools/check_tyd.py` checks every TyD file for broken brackets and bad references.
 - `tools/build_models.ps1` (Windows) or `blender -b -P tools/build_models.py` rebuilds every model, texture, thumbnail and Workshop preview. The committed assets were built with **Blender 5.2.2 LTS**; the script strips Blender's PNG timestamp metadata, so a rebuild is byte-for-byte identical and shows no diff unless a model really changed.
 - `tools/package.ps1` (Windows) or `tools/package.sh` (Linux/macOS) builds clean, upload-ready copies of all three packages in `dist/`, after validating the TyD files and rejecting any file the Workshop uploader would refuse.
