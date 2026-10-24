@@ -1,0 +1,39 @@
+Furniture
+	{
+	Name		MT_FabPrinter3
+	Base		"Large Product Printer"
+	Thumbnail	"fabprinter_thumb.png"
+	Models
+		[
+			{
+			File		"fabprinter.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Industrial Printer Mk III"
+		ButtonDescription       "Prints 5500 copies per load at 2.5x the speed of a large printer, for less money per copy."
+		UnlockYear              2011
+		Cost                    27000
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Frame
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Base
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "2FD3A8"
+		TertiaryColorName       Lights
+		}
+	ProductPrinter
+		{
+		Type		Product
+		PrintSpeed	2.5
+		PrintAmount	5500
+		PrintPrice	0.1
+		}
+	}

@@ -1,0 +1,39 @@
+Furniture
+	{
+	Name		MT_FabPrinter9
+	Base		"Large Product Printer"
+	Thumbnail	"fabprinter_thumb.png"
+	Models
+		[
+			{
+			File		"fabprinter.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Industrial Printer Mk IX"
+		ButtonDescription       "Prints 14500 copies per load at 5.5x the speed of a large printer, for less money per copy."
+		UnlockYear              2017
+		Cost                    99000
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Frame
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Base
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "FF6FD8"
+		TertiaryColorName       Lights
+		}
+	ProductPrinter
+		{
+		Type		Product
+		PrintSpeed	5.5
+		PrintAmount	14500
+		PrintPrice	0.1
+		}
+	}

@@ -30,6 +30,7 @@ Furniture
 		}
 	ProductPrinter
 		{
+		Type		Product
 		PrintSpeed	2
 		PrintAmount	4000
 		PrintPrice	0.1

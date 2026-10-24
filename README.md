@@ -86,6 +86,22 @@ The case, accent and light colors can be changed in-game. They upgrade like the 
 | Smart Fridge, Induction Stove, Bean-to-Cup Machine, Smart Vending Machine | 2010 | Kitchen: work like the vanilla Fridge, Stove, Espresso Machine and Vending Machine |
 | Heat Pump Heater, Power Wall, Smart Vent | 2010 | Utility: work like the vanilla Small Heater, Battery and Ventilation |
 
+### Industrial printer tiers
+Ten more product printers, each with more capacity than the last. They all share the Industrial Product Printer model and differ by colour, price and throughput.
+
+| Printer | Unlock | Copies per load | Print speed | Cost |
+|---|---|---|---|---|
+| Industrial Printer Mk II | 2010 | 4,000 | 2x | 15,000 |
+| Industrial Printer Mk III | 2011 | 5,500 | 2.5x | 27,000 |
+| Industrial Printer Mk IV | 2012 | 7,000 | 3x | 39,000 |
+| Industrial Printer Mk V | 2013 | 8,500 | 3.5x | 51,000 |
+| Industrial Printer Mk VI | 2014 | 10,000 | 4x | 63,000 |
+| Industrial Printer Mk VII | 2015 | 11,500 | 4.5x | 75,000 |
+| Industrial Printer Mk VIII | 2016 | 13,000 | 5x | 87,000 |
+| Industrial Printer Mk IX | 2017 | 14,500 | 5.5x | 99,000 |
+| Industrial Printer Mk X | 2018 | 16,000 | 6x | 111,000 |
+| Industrial Printer Mk XI | 2019 | 17,500 | 6.5x | 123,000 |
+
 ### Personalities
 - **Gadgeteer**: RGB Thumb + Forgetful
 - **Nocturnal**: Night owl
@@ -107,6 +123,7 @@ Without the code mod, every market has fixed demand. With it, each new category 
 - The code mods are plain `.cs` files the game compiles itself. Bind the debug console in Options > Keys, then use `RECOMPILE_DLL_MOD` and `RELOAD_DLL_MOD` to try a change without restarting the game.
 - The game's script compiler references `Assembly-CSharp` and Unity's core modules only. The IMGUI types (`GUI`, `GUIStyle`, `TextAnchor`, `GUI.skin`) are **not** available and using them fails the whole code mod with `CS246`, so draw nothing yourself: use `WindowManager.Instance.ShowMessageBox(...)` or `Debug.Log` for feedback.
 - Data and furniture packages are picked up from `Mods/` and `Furniture/` as soon as they are there. Code mods also need `<DLLMods>\<folder name>Setting.txt` containing `[Active]` then `True`, or they load but never activate.
+- A furniture TyD component node **replaces** the one inherited from its `Base` instead of merging into it. Any enum field you don't restate falls back to its default, not the base's value: `ProductPrinter` without `Type` is a *product* printer, so a component fab must say `Type Component` explicitly.
 - `python3 tools/check_tyd.py` checks every TyD file for broken brackets and bad references.
 - `tools/build_models.ps1` (Windows) or `blender -b -P tools/build_models.py` rebuilds every model, texture, thumbnail and Workshop preview. The committed assets were built with **Blender 5.2.2 LTS**; the script strips Blender's PNG timestamp metadata, so a rebuild is byte-for-byte identical and shows no diff unless a model really changed.
 - `tools/package.ps1` (Windows) or `tools/package.sh` (Linux/macOS) builds clean, upload-ready copies of all three packages in `dist/`, after validating the TyD files and rejecting any file the Workshop uploader would refuse.

@@ -30,6 +30,7 @@ Furniture
 		}
 	ProductPrinter
 		{
+		Type		Component
 		PrintSpeed	2
 		PrintPrice	0.1
 		}
