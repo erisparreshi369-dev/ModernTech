@@ -90,8 +90,12 @@ The case, accent and light colors can be changed in-game. They upgrade like the 
 - **Gadgeteer**: RGB Thumb + Forgetful
 - **Nocturnal**: Night owl
 
-### Your own AI doubles your team's speed (ModernTech Demand code mod)
-Once your company has released its own **AI Assistant, Coding Assistant or Image Generator** (in-house or for sale), every employee uses it: designing and developing software goes **twice as fast**. The code mod does this by doubling the difficulty's design and development speed while you own an AI, and the difficulty name shows it, for example "Medium +AI". It switches back if you no longer have one. The game caps furniture auras at +25%, so this needs the code mod.
+### Your own AI coding agent doubles your team's speed (ModernTech Demand code mod)
+Once your company has released its own **Coding agent** — the top category of the Coding Assistant software type, in-house or for sale — your employees use it and designing and developing software goes **100% faster** (twice as fast). Smart autocomplete and AI pair programmer products don't count; only the coding agent does.
+
+**It's an option:** press **Ctrl+Alt+A** in game to switch the boost on or off. The choice is remembered, so it survives saving, loading and starting a new game. The first time it kicks in, the game shows a one-time message explaining the key.
+
+The code mod does this by doubling the difficulty's design and development speed while the boost is on, and the difficulty name shows it, for example "Medium +AI". Because the boosted difficulty is what gets saved, loading a game never doubles the speed twice. The game caps furniture auras at +25%, so this needs the code mod.
 
 ### Double skills (ModernTech Demand code mod)
 Every employee's skills are doubled once, up to the game's 100% cap, when they join your company or when you first load a game with the code mod. The save remembers who was doubled, so loading a game never doubles anyone twice. Skills already at 50% or more go to 100%.
@@ -100,6 +104,7 @@ Every employee's skills are doubled once, up to the game's 100% cap, when they j
 Without the code mod, every market has fixed demand. With it, each new category starts at 25% of its full demand and grows to 100% over 3 to 12 years.
 
 ## For modders
+- The code mods are plain `.cs` files the game compiles itself. Bind the debug console in Options > Keys, then use `RECOMPILE_DLL_MOD` and `RELOAD_DLL_MOD` to try a change without restarting the game.
 - `python3 tools/check_tyd.py` checks every TyD file for broken brackets and bad references.
 - `blender -b -P tools/build_models.py` rebuilds every model, texture, thumbnail and Workshop preview.
 - `tools/package.sh` builds clean, upload-ready copies of all three packages in `dist/`.
