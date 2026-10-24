@@ -12,7 +12,7 @@ The game loads data, furniture and code mods from different folders, so ModernTe
 |---|---|---|---|
 | **ModernTech** (data) | this folder | `Mods/ModernTech` | Yes |
 | **ModernTech PCs** (furniture) | `extras/Furniture/ModernTech PCs` | `Furniture/ModernTech PCs` | Optional |
-| **ModernTech Demand** (code) | `extras/DLLMods/ModernTechDemand` | `DLLMods/ModernTechDemand` | Optional |
+| **ModernTech Demand** (code: growing demand + AI speed boost) | `extras/DLLMods/ModernTechDemand` | `DLLMods/ModernTechDemand` | Optional |
 
 ## Install
 
@@ -89,6 +89,9 @@ The case, accent and light colors can be changed in-game. They upgrade like the 
 ### Personalities
 - **Gadgeteer**: RGB Thumb + Forgetful
 - **Nocturnal**: Night owl
+
+### Your own AI doubles your team's speed (ModernTech Demand code mod)
+Once your company has released its own **AI Assistant, Coding Assistant or Image Generator** (in-house or for sale), every employee uses it: designing and developing software goes **twice as fast**. The code mod does this by doubling the difficulty's design and development speed while you own an AI, and the difficulty name shows it, for example "Medium +AI". It switches back if you no longer have one. The game caps furniture auras at +25%, so this needs the code mod.
 
 ### Growing demand (ModernTech Demand)
 Without the code mod, every market has fixed demand. With it, each new category starts at 25% of its full demand and grows to 100% over 3 to 12 years.
