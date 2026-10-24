@@ -12,7 +12,7 @@ The game loads data, furniture and code mods from different folders, so ModernTe
 |---|---|---|---|
 | **ModernTech** (data) | this folder | `Mods/ModernTech` | Yes |
 | **ModernTech PCs** (furniture) | `extras/Furniture/ModernTech PCs` | `Furniture/ModernTech PCs` | Optional |
-| **ModernTech Demand** (code: growing demand + AI speed boost) | `extras/DLLMods/ModernTechDemand` | `DLLMods/ModernTechDemand` | Optional |
+| **ModernTech Demand** (code: growing demand, AI speed boost, double skills) | `extras/DLLMods/ModernTechDemand` | `DLLMods/ModernTechDemand` | Optional |
 
 ## Install
 
@@ -92,6 +92,9 @@ The case, accent and light colors can be changed in-game. They upgrade like the 
 
 ### Your own AI doubles your team's speed (ModernTech Demand code mod)
 Once your company has released its own **AI Assistant, Coding Assistant or Image Generator** (in-house or for sale), every employee uses it: designing and developing software goes **twice as fast**. The code mod does this by doubling the difficulty's design and development speed while you own an AI, and the difficulty name shows it, for example "Medium +AI". It switches back if you no longer have one. The game caps furniture auras at +25%, so this needs the code mod.
+
+### Double skills (ModernTech Demand code mod)
+Every employee's skills are doubled once, up to the game's 100% cap, when they join your company or when you first load a game with the code mod. The save remembers who was doubled, so loading a game never doubles anyone twice. Skills already at 50% or more go to 100%.
 
 ### Growing demand (ModernTech Demand)
 Without the code mod, every market has fixed demand. With it, each new category starts at 25% of its full demand and grows to 100% over 3 to 12 years.
