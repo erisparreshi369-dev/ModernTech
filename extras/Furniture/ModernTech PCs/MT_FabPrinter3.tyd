@@ -16,9 +16,9 @@ Furniture
 	Furniture
 		{
 		LocalizedName           "Industrial Printer Mk III"
-		ButtonDescription       "Prints 5500 copies per load at 2.5x the speed of a large printer, for less money per copy."
+		ButtonDescription       "Prints 4600 copies per load at 2.2x the speed of a large printer, for less money per copy."
 		UnlockYear              2011
-		Cost                    27000
+		Cost                    23000
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Frame
@@ -32,8 +32,8 @@ Furniture
 	ProductPrinter
 		{
 		Type		Product
-		PrintSpeed	2.5
-		PrintAmount	5500
+		PrintSpeed	2.2
+		PrintAmount	4600
 		PrintPrice	0.1
 		}
 	}

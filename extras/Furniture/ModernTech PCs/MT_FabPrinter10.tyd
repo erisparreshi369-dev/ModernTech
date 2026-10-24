@@ -16,9 +16,9 @@ Furniture
 	Furniture
 		{
 		LocalizedName           "Industrial Printer Mk X"
-		ButtonDescription       "Prints 16000 copies per load at 6x the speed of a large printer, for less money per copy."
+		ButtonDescription       "Prints 7400 copies per load at 2.9x the speed of a large printer, for less money per copy."
 		UnlockYear              2018
-		Cost                    111000
+		Cost                    79000
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Frame
@@ -32,8 +32,8 @@ Furniture
 	ProductPrinter
 		{
 		Type		Product
-		PrintSpeed	6
-		PrintAmount	16000
+		PrintSpeed	2.9
+		PrintAmount	7400
 		PrintPrice	0.1
 		}
 	}

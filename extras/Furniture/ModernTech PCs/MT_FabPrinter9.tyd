@@ -16,9 +16,9 @@ Furniture
 	Furniture
 		{
 		LocalizedName           "Industrial Printer Mk IX"
-		ButtonDescription       "Prints 14500 copies per load at 5.5x the speed of a large printer, for less money per copy."
+		ButtonDescription       "Prints 7000 copies per load at 2.8x the speed of a large printer, for less money per copy."
 		UnlockYear              2017
-		Cost                    99000
+		Cost                    71000
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Frame
@@ -32,8 +32,8 @@ Furniture
 	ProductPrinter
 		{
 		Type		Product
-		PrintSpeed	5.5
-		PrintAmount	14500
+		PrintSpeed	2.8
+		PrintAmount	7000
 		PrintPrice	0.1
 		}
 	}

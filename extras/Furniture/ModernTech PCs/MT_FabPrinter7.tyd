@@ -16,9 +16,9 @@ Furniture
 	Furniture
 		{
 		LocalizedName           "Industrial Printer Mk VII"
-		ButtonDescription       "Prints 11500 copies per load at 4.5x the speed of a large printer, for less money per copy."
+		ButtonDescription       "Prints 6200 copies per load at 2.6x the speed of a large printer, for less money per copy."
 		UnlockYear              2015
-		Cost                    75000
+		Cost                    55000
 		ColorPrimaryEnabled     True
 		ColorPrimaryDefault     "2B2D33"
 		PrimaryColorName        Frame
@@ -32,8 +32,8 @@ Furniture
 	ProductPrinter
 		{
 		Type		Product
-		PrintSpeed	4.5
-		PrintAmount	11500
+		PrintSpeed	2.6
+		PrintAmount	6200
 		PrintPrice	0.1
 		}
 	}

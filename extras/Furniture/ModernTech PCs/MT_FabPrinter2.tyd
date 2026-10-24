@@ -16,7 +16,7 @@ Furniture
 	Furniture
 		{
 		LocalizedName           "Industrial Printer Mk II"
-		ButtonDescription       "Prints 4000 copies per load at 2x the speed of a large printer, for less money per copy."
+		ButtonDescription       "Prints 4200 copies per load at 2.1x the speed of a large printer, for less money per copy."
 		UnlockYear              2010
 		Cost                    15000
 		ColorPrimaryEnabled     True
@@ -32,8 +32,8 @@ Furniture
 	ProductPrinter
 		{
 		Type		Product
-		PrintSpeed	2
-		PrintAmount	4000
+		PrintSpeed	2.1
+		PrintAmount	4200
 		PrintPrice	0.1
 		}
 	}

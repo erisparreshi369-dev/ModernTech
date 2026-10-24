@@ -89,18 +89,20 @@ The case, accent and light colors can be changed in-game. They upgrade like the 
 ### Industrial printer tiers
 Ten more product printers, each with more capacity than the last. They all share the Industrial Product Printer model and differ by colour, price and throughput.
 
+Every tier beats the one below it, including the jump from the plain Industrial Product Printer (4,000 copies, 2x) to Mk II. The ladder tops out at 7,800 copies per load and 3x print speed — roughly 11x a vanilla large printer, not the 50x+ an earlier version of these numbers produced, which flooded the market with copies.
+
 | Printer | Unlock | Copies per load | Print speed | Cost |
 |---|---|---|---|---|
-| Industrial Printer Mk II | 2010 | 4,000 | 2x | 15,000 |
-| Industrial Printer Mk III | 2011 | 5,500 | 2.5x | 27,000 |
-| Industrial Printer Mk IV | 2012 | 7,000 | 3x | 39,000 |
-| Industrial Printer Mk V | 2013 | 8,500 | 3.5x | 51,000 |
-| Industrial Printer Mk VI | 2014 | 10,000 | 4x | 63,000 |
-| Industrial Printer Mk VII | 2015 | 11,500 | 4.5x | 75,000 |
-| Industrial Printer Mk VIII | 2016 | 13,000 | 5x | 87,000 |
-| Industrial Printer Mk IX | 2017 | 14,500 | 5.5x | 99,000 |
-| Industrial Printer Mk X | 2018 | 16,000 | 6x | 111,000 |
-| Industrial Printer Mk XI | 2019 | 17,500 | 6.5x | 123,000 |
+| Industrial Printer Mk II | 2010 | 4,200 | 2.1x | 15,000 |
+| Industrial Printer Mk III | 2011 | 4,600 | 2.2x | 23,000 |
+| Industrial Printer Mk IV | 2012 | 5,000 | 2.3x | 31,000 |
+| Industrial Printer Mk V | 2013 | 5,400 | 2.4x | 39,000 |
+| Industrial Printer Mk VI | 2014 | 5,800 | 2.5x | 47,000 |
+| Industrial Printer Mk VII | 2015 | 6,200 | 2.6x | 55,000 |
+| Industrial Printer Mk VIII | 2016 | 6,600 | 2.7x | 63,000 |
+| Industrial Printer Mk IX | 2017 | 7,000 | 2.8x | 71,000 |
+| Industrial Printer Mk X | 2018 | 7,400 | 2.9x | 79,000 |
+| Industrial Printer Mk XI | 2019 | 7,800 | 3x | 87,000 |
 
 ### Personalities
 - **Gadgeteer**: RGB Thumb + Forgetful
