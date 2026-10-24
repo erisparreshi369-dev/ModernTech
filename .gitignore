@@ -25,3 +25,7 @@ desktop.ini
 
 # Written by the game on Workshop upload
 TypeInfo.txt
+
+# Python bytecode from tools/check_tyd.py and build_models.py
+__pycache__/
+*.pyc
