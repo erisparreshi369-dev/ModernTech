@@ -1,0 +1,34 @@
+Furniture
+	{
+	Name		MT_AIPanel
+	Base		"Painting"
+	Thumbnail	"aipanel_thumb.png"
+	Models
+		[
+			{
+			File		"aipanel.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "AI Assistant Panel"
+		ButtonDescription       "An office AI on the wall. Answers questions and drafts the boring parts, so everyone in the room works faster and better."
+		Cost                    15000
+		Wattage                 300
+		UnlockYear              2023
+		AuraValues              [ 0.15; 0.1; 0.05 ]
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Frame
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Accent
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Glow
+		}
+	}

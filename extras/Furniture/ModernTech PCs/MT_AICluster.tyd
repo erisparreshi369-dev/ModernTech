@@ -1,0 +1,38 @@
+Furniture
+	{
+	Name		MT_AICluster
+	Base		"Big Server Rack"
+	Thumbnail	"aicluster_thumb.png"
+	Models
+		[
+			{
+			File		"aicluster.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "AI Server Cluster"
+		ButtonDescription       "Two racks of GPU servers wired together: three times the power of a big server rack."
+		Cost                    250000
+		Wattage                 30000
+		Noisiness               2
+		UnlockYear              2022
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Case
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Blades
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	Server
+		{
+		Power	150000
+		}
+	}

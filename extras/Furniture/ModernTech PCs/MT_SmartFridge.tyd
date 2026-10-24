@@ -1,0 +1,31 @@
+Furniture
+	{
+	Name		MT_SmartFridge
+	Base		"Fridge"
+	Thumbnail	"smartfridge_thumb.png"
+	Models
+		[
+			{
+			File		"smartfridge.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Smart Fridge"
+		ButtonDescription       "A fridge with a screen on the door. Works like a fridge."
+		UnlockYear              2016
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Body
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Handles
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	}

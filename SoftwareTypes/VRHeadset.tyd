@@ -1,0 +1,275 @@
+SoftwareType
+	{
+	Name			"VR Headset"
+	Description		"A screen strapped to your face, in a good way"
+	Random			0.2
+	OptimalDevTime	55
+	SubmarketNames	[ Gaming; Enterprise; Fitness ]
+	NameGenerator	MT_VR
+	InHouse			False
+	Hardware		True
+	Categories
+		[
+			{
+			Name			"PC VR headset"
+			Description		"Plugs into a very fast computer with a very long cable"
+			Unlock			2016
+			Popularity		0.06
+			Retention		30
+			TimeScale		1
+			Iterative		1
+			IdealPrice		600
+			Submarkets		[ 4; 1; 1 ]
+			}
+			{
+			Name			"Standalone headset"
+			Description		"No cables, no computer, no excuses"
+			Unlock			2019
+			Popularity		0.1
+			Retention		30
+			TimeScale		1
+			Iterative		1
+			IdealPrice		400
+			Submarkets		[ 3; 1; 3 ]
+			}
+			{
+			Name			"Mixed reality headset"
+			Description		"Your living room, plus a few floating windows"
+			Unlock			2023
+			Popularity		0.04
+			Retention		36
+			TimeScale		1
+			Iterative		1
+			IdealPrice		1500
+			Submarkets		[ 1; 4; 1 ]
+			}
+		]
+	Manufacturing
+		{
+		Components
+			[
+				{
+				Name				"Display panels"
+				BuiltInThumbnail	LCD
+				Price				60
+				Time				12
+				}
+				{
+				Name				Lenses
+				BuiltInThumbnail	Plastic
+				Price				15
+				Time				6
+				}
+				{
+				Name				"Motion sensors"
+				BuiltInThumbnail	Gyroscope
+				Price				8
+				Time				4
+				}
+				{
+				Name				"Tracking cameras"
+				BuiltInThumbnail	Camera
+				Price				25
+				Time				8
+				DependsOn			"Inside-out tracking"
+				}
+				{
+				Name				"Mobile chipset"
+				BuiltInThumbnail	Microchip
+				Price				40
+				Time				12
+				DependsOn			"Standalone mode"
+				}
+				{
+				Name				"Battery pack"
+				BuiltInThumbnail	Battery
+				Price				15
+				Time				4
+				DependsOn			"Standalone mode"
+				}
+				{
+				Name				Speakers
+				BuiltInThumbnail	Speaker
+				Price				6
+				Time				4
+				}
+				{
+				Name				"Circuit board"
+				BuiltInThumbnail	PCB
+				Price				15
+				Time				8
+				}
+				{
+				Name				"Headset shell"
+				BuiltInThumbnail	PlasticCase
+				Price				12
+				Time				6
+				}
+			]
+		Processes
+			[
+				{
+				Inputs	[ "Motion sensors"; "Tracking cameras"; "Mobile chipset"; "Battery pack" ]
+				Output	"Circuit board"
+				}
+				{
+				Inputs	[ "Display panels"; Lenses; Speakers ]
+				Output	"Headset shell"
+				}
+				{
+				Inputs	[ "Circuit board"; "Headset shell" ]
+				Output	Final
+				}
+			]
+		FinalTime	4
+		Design		[ MT_VR ]
+		}
+	Features
+		[
+			{
+			Name		Optics
+			Spec		Hardware
+			DevTime		6
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Fresnel lenses"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 1; 2 ]
+					}
+					{
+					Name		"High-res displays"
+					Description "No more counting the pixels"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2018
+					Submarkets	[ 3; 3; 1 ]
+					}
+					{
+					Name		"Pancake lenses"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2022
+					Submarkets	[ 2; 2; 3 ]
+					}
+					{
+					Name		"Eye tracking"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2021
+					Submarkets	[ 3; 3; 0 ]
+					}
+				]
+			}
+			{
+			Name		Tracking
+			Spec		Hardware
+			DevTime		5
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Head tracking"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 2; 2 ]
+					}
+					{
+					Name		"Inside-out tracking"
+					Description "No more sensors screwed to the walls"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2019
+					Submarkets	[ 3; 2; 3 ]
+					}
+					{
+					Name		"Hand tracking"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2020
+					Submarkets	[ 2; 3; 2 ]
+					}
+				]
+			}
+			{
+			Name			Platform
+			Spec			System
+			DevTime			5
+			CodeArt			1
+			Dependencies	"Coding Assistant"
+			Submarkets		[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"VR app store"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 4; 1; 2 ]
+					}
+					{
+					Name		"Standalone mode"
+					Description "Its own chip, its own battery, its own life"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2019
+					Submarkets	[ 3; 1; 4 ]
+					}
+					{
+					Name				"Passthrough video"
+					DevTime				4
+					Level				2
+					CodeArt				1
+					Unlock				2023
+					SoftwareCategories	[ "Mixed reality headset" ]
+					Submarkets			[ 1; 4; 1 ]
+					}
+				]
+			}
+			{
+			Name		Comfort
+			Spec		Hardware
+			DevTime		3
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Adjustable strap"
+					DevTime		1
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 1; 3 ]
+					}
+					{
+					Name		"Spatial audio"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 4; 1; 1 ]
+					}
+					{
+					Name		"Sweat-proof padding"
+					Description "Because the workout game is very convincing"
+					DevTime		1
+					Level		1
+					CodeArt		0.5
+					Unlock		2020
+					Submarkets	[ 0; 0; 4 ]
+					}
+				]
+			}
+		]
+	}

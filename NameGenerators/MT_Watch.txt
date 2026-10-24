@@ -1,0 +1,23 @@
+-start(base)
+-base(base2,num,stop)
+Pulse
+Tempo
+Chrono
+Pace
+Stride
+Vital
+Orbit
+Halo
+Kinet
+Echo
+-base2(num,stop)
+ Watch
+ Band
+ Fit
+ Time
+-num(stop)
+ 2
+ 3
+ S
+ Ultra
+ Lite

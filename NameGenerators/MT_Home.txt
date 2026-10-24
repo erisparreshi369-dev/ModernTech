@@ -1,0 +1,23 @@
+-start(base)
+-base(base2,ext,stop)
+Nest
+Hearth
+Haven
+Den
+Abode
+Lumen
+Porch
+Roost
+Beacon
+Casa
+-base2(ext,stop)
+hub
+link
+home
+ Home
+ Hub
+-ext(stop)
+ Plus
+ Secure
+ Eco
+ Pro

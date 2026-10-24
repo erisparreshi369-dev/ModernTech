@@ -1,0 +1,193 @@
+SoftwareType
+	{
+	Name			"Smart Home Hub"
+	Description		"Turn the lights off from bed. Or from another country"
+	Random			0.2
+	OptimalDevTime	40
+	SubmarketNames	[ Convenience; Security; "Energy saving" ]
+	NameGenerator	MT_Home
+	OSSupport		[ Phone; Computer ]
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Home automation"
+			Description		"Lights, blinds and kettle, all on a schedule"
+			Unlock			2012
+			Popularity		0.25
+			Retention		36
+			TimeScale		0.9
+			Iterative		1
+			IdealPrice		50
+			Submarkets		[ 4; 1; 2 ]
+			}
+			{
+			Name			"Home security"
+			Description		"See who's at the door before you pretend you're not home"
+			Unlock			2014
+			Popularity		0.2
+			Retention		48
+			TimeScale		1
+			Iterative		1
+			IdealPrice		90
+			Submarkets		[ 1; 4; 0 ]
+			}
+			{
+			Name			"Energy manager"
+			Description		"Runs the dishwasher when power is cheap"
+			Unlock			2017
+			Popularity		0.15
+			Retention		48
+			TimeScale		1
+			Iterative		1
+			IdealPrice		70
+			Submarkets		[ 1; 0; 4 ]
+			}
+		]
+	Features
+		[
+			{
+			Name		Devices
+			Spec		Network
+			DevTime		5
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Wi-Fi pairing"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 1 ]
+					}
+					{
+					Name		"Zigbee bridge"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2013
+					Submarkets	[ 2; 2; 2 ]
+					}
+					{
+					Name		"Matter support"
+					Description "Finally, every brand talks to every other brand"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2022
+					Submarkets	[ 4; 1; 1 ]
+					}
+				]
+			}
+			{
+			Name			Automation
+			Spec			System
+			DevTime			4
+			CodeArt			1
+			Dependencies	"Coding Assistant"
+			Submarkets		[ 1; 0; 1 ]
+			Features
+				[
+					{
+					Name		Schedules
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 0; 2 ]
+					}
+					{
+					Name		Routines
+					Description "Say good night, and the whole house goes to sleep"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2015
+					Submarkets	[ 4; 1; 1 ]
+					}
+					{
+					Name		"Presence detection"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2017
+					Submarkets	[ 2; 2; 3 ]
+					}
+					{
+					Name				"Smart meter link"
+					DevTime				3
+					Level				2
+					CodeArt				1
+					SoftwareCategories	[ "Energy manager" ]
+					Submarkets			[ 0; 0; 4 ]
+					}
+				]
+			}
+			{
+			Name		Security
+			Spec		System
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 0; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Camera feeds"
+					Server		0.001
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name		"Smart locks"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 2; 3; 0 ]
+					}
+					{
+					Name		"Intruder alerts"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 0; 4; 0 ]
+					}
+				]
+			}
+			{
+			Name			App
+			Spec			2D
+			DevTime			3
+			CodeArt			0.5
+			Dependencies	"Image Generator"
+			Submarkets		[ 1; 0; 1 ]
+			Features
+				[
+					{
+					Name		"Remote control"
+					DevTime		2
+					Level		1
+					CodeArt		0.6
+					Submarkets	[ 4; 1; 0 ]
+					}
+					{
+					Name		"Energy graphs"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 0; 0; 4 ]
+					}
+					{
+					Name		"Voice control"
+					Description "Lights on. No, ON. Not 'play Lights On'"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2016
+					Submarkets	[ 3; 1; 1 ]
+					}
+				]
+			}
+		]
+	}

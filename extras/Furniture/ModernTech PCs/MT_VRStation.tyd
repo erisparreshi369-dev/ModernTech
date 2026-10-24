@@ -1,0 +1,37 @@
+Furniture
+	{
+	Name		MT_VRStation
+	Base		"Modern Computer"
+	Thumbnail	"vrstation_thumb.png"
+	UpgradeFrom	Computer
+	Models
+		[
+			{
+			File		"vrstation.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "VR Dev Station"
+		ButtonDescription       "A fast PC with a VR headset for testing. Quick, a little loud."
+		Cost                    2600
+		Wattage                 900
+		Noisiness               0.8
+		UnlockYear              2016
+		ComputerPowerModifier   1.2
+		IgnorePCRelease         True
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Case
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Accent
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	}

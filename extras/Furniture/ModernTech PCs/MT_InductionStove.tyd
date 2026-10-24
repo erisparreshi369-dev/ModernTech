@@ -1,0 +1,31 @@
+Furniture
+	{
+	Name		MT_InductionStove
+	Base		"Stove"
+	Thumbnail	"inductionstove_thumb.png"
+	Models
+		[
+			{
+			File		"inductionstove.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Induction Stove"
+		ButtonDescription       "A glass-top induction stove for your cooks. Works like a stove."
+		UnlockYear              2010
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Body
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Trim
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Rings
+		}
+	}

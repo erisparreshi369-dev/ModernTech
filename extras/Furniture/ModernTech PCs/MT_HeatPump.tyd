@@ -1,0 +1,31 @@
+Furniture
+	{
+	Name		MT_HeatPump
+	Base		"Small Heater"
+	Thumbnail	"heatpump_thumb.png"
+	Models
+		[
+			{
+			File		"heatpump.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Heat Pump Heater"
+		ButtonDescription       "A modern heat pump unit. Works like a small heater."
+		UnlockYear              2014
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Body
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Fan
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	}

@@ -1,0 +1,29 @@
+Design
+	{
+	ID						MT_Watch
+	Name					"Smartwatch"
+	BaseMesh				Body
+	Objects
+		[
+			{
+			ID		Body
+			Name	Body
+			Mesh	"mt_watch.obj"
+			}
+		]
+	Attachments				[ ]
+	BaseTexture				"mt_albedo.png"
+	ExtraTexture			"mt_extra.png"
+	PrimaryColorEnabled		True
+	SecondaryColorEnabled	True
+	TertiaryColorEnabled	True
+	ColorSets
+		[
+			{
+			PrimaryColors	[ 1C1D22; 2B2D33; E8E8EC ]
+			SecondaryColors	[ 8A8F99; 3A3D45 ]
+			TertiaryColors	[ 20C8E0; FF3366; 7CFF4F ]
+			}
+		]
+	WorldScale				0.2
+	}

@@ -50,6 +50,7 @@ SoftwareType
 			{
 			Name		"Image model"
 			Spec		System
+			Dependencies	"Coding Assistant"
 			DevTime		6
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -96,6 +97,15 @@ SoftwareType
 					SoftwareCategories	[ "Text-to-video" ]
 					Submarkets			[ 1; 2; 4 ]
 					}
+					{
+					Name		"Text rendering"
+					Description "Finally, signs that say actual words"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2024
+					Submarkets	[ 2; 2; 3 ]
+					}
 				]
 			}
 			{
@@ -128,6 +138,14 @@ SoftwareType
 					Level		2
 					CodeArt		1
 					Submarkets	[ 1; 2; 2 ]
+					}
+					{
+					Name		"Brand style kits"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 0; 1; 4 ]
 					}
 				]
 			}

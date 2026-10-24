@@ -1,0 +1,31 @@
+Furniture
+	{
+	Name		MT_SmartVending
+	Base		"Vending Machine"
+	Thumbnail	"smartvending_thumb.png"
+	Models
+		[
+			{
+			File		"smartvending.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Smart Vending Machine"
+		ButtonDescription       "Tap to pay, touch screen, same snacks. Works like a vending machine."
+		UnlockYear              2015
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Body
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Shelves
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	}

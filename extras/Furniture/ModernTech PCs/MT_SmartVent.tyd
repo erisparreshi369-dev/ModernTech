@@ -1,0 +1,31 @@
+Furniture
+	{
+	Name		MT_SmartVent
+	Base		"Ventilation"
+	Thumbnail	"smartvent_thumb.png"
+	Models
+		[
+			{
+			File		"smartvent.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Smart Vent"
+		ButtonDescription       "A wall vent with a lit ring. Works like ventilation."
+		UnlockYear              2015
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Body
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Fan
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Ring
+		}
+	}

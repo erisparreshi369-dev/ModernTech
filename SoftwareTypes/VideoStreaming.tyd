@@ -1,0 +1,190 @@
+SoftwareType
+	{
+	Name			"Video Streaming"
+	Description		"Every show ever made, and still nothing to watch"
+	Random			0.2
+	OptimalDevTime	45
+	SubmarketNames	[ Viewers; Creators; Advertisers ]
+	NameGenerator	MT_Stream
+	OSSupport		[ Computer; Phone ]
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"Video on demand"
+			Description		"Pause, rewind, binge the whole season"
+			Unlock			2007
+			Popularity		0.45
+			Retention		36
+			TimeScale		1
+			Iterative		1
+			IdealPrice		60
+			Submarkets		[ 4; 1; 2 ]
+			}
+			{
+			Name			"Live streaming"
+			Description		"Watch strangers play games, live, for hours"
+			Unlock			2011
+			Popularity		0.3
+			Retention		30
+			TimeScale		1
+			Iterative		1
+			IdealPrice		30
+			Submarkets		[ 2; 4; 2 ]
+			}
+			{
+			Name			"Short video"
+			Description		"Fifteen seconds at a time, until it's 3 a.m."
+			Unlock			2016
+			Popularity		0.5
+			Retention		18
+			TimeScale		0.9
+			Iterative		1
+			IdealPrice		20
+			Submarkets		[ 3; 3; 3 ]
+			}
+		]
+	Features
+		[
+			{
+			Name			Player
+			Spec			2D
+			DevTime			4
+			CodeArt			0.6
+			Dependencies	"Image Generator"
+			Submarkets		[ 1; 0; 0 ]
+			Features
+				[
+					{
+					Name		"Adaptive bitrate"
+					Description "Blurry for a second, then crisp"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2008
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		Subtitles
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 2; 1; 0 ]
+					}
+					{
+					Name		"Picture-in-picture"
+					DevTime		2
+					Level		2
+					CodeArt		0.6
+					Unlock		2015
+					Submarkets	[ 3; 0; 0 ]
+					}
+				]
+			}
+			{
+			Name		Delivery
+			Spec		Network
+			DevTime		5
+			CodeArt		1
+			Submarkets	[ 1; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Edge caching"
+					Server		0.001
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"4K streaming"
+					Server		0.002
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2014
+					Submarkets	[ 4; 1; 0 ]
+					}
+					{
+					Name				"Low-latency mode"
+					Server				0.001
+					DevTime				4
+					Level				2
+					CodeArt				1
+					Unlock				2018
+					SoftwareCategories	[ "Live streaming" ]
+					Submarkets			[ 1; 4; 0 ]
+					}
+				]
+			}
+			{
+			Name			Discovery
+			Spec			System
+			DevTime			4
+			CodeArt			1
+			Dependencies	"Coding Assistant"
+			Submarkets		[ 1; 0; 1 ]
+			Features
+				[
+					{
+					Name		"Watch history"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 0; 1 ]
+					}
+					{
+					Name		Recommendations
+					Description "Because you watched one cooking show"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2009
+					Submarkets	[ 3; 1; 3 ]
+					}
+					{
+					Name		"Targeted ads"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 0; 1; 4 ]
+					}
+				]
+			}
+			{
+			Name		"Creator tools"
+			Spec		2D
+			DevTime		3
+			CodeArt		0.6
+			Submarkets	[ 0; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Upload studio"
+					DevTime		3
+					Level		1
+					CodeArt		0.6
+					Submarkets	[ 0; 3; 0 ]
+					}
+					{
+					Name		"Live chat"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2011
+					Submarkets	[ 2; 3; 0 ]
+					}
+					{
+					Name		Monetization
+					Description "Turns views into rent money, slowly"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2009
+					Submarkets	[ 0; 4; 2 ]
+					}
+				]
+			}
+		]
+	}

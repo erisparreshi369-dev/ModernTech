@@ -50,6 +50,7 @@ SoftwareType
 			{
 			Name		"Language model"
 			Spec		System
+			Dependencies	"Coding Assistant"
 			Description "The brain of the operation"
 			DevTime		6
 			CodeArt		1
@@ -99,6 +100,15 @@ SoftwareType
 					SoftwareCategories	[ "Personal agent" ]
 					Submarkets			[ 4; 1; 0 ]
 					}
+					{
+					Name		"Reasoning mode"
+					Description "Thinks before it answers. Usually"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2024
+					Submarkets	[ 3; 2; 0 ]
+					}
 				]
 			}
 			{
@@ -138,6 +148,7 @@ SoftwareType
 			{
 			Name		Interface
 			Spec		2D
+			Dependencies	"Image Generator"
 			DevTime		3
 			CodeArt		0.5
 			Submarkets	[ 1; 1; 1 ]
@@ -165,6 +176,14 @@ SoftwareType
 					Level		1
 					CodeArt		0.5
 					Submarkets	[ 0; 0; 3 ]
+					}
+					{
+					Name		"Screen sharing"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2025
+					Submarkets	[ 3; 1; 0 ]
 					}
 				]
 			}

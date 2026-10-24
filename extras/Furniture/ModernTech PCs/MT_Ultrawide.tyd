@@ -1,0 +1,37 @@
+Furniture
+	{
+	Name		MT_Ultrawide
+	Base		"Modern Computer"
+	Thumbnail	"ultrawide_thumb.png"
+	UpgradeFrom	Computer
+	Models
+		[
+			{
+			File		"ultrawide.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Ultrawide Workstation"
+		ButtonDescription       "A curved triple-wide screen. Room for every window, and quiet too."
+		Cost                    2100
+		Wattage                 600
+		Noisiness               0.4
+		UnlockYear              2018
+		ComputerPowerModifier   1.2
+		IgnorePCRelease         True
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Frame
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Accent
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	}

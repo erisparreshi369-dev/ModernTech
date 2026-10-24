@@ -38,6 +38,7 @@ SoftwareType
 			{
 			Name		Chat
 			Spec		System
+			Dependencies	"Coding Assistant"
 			DevTime		4
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -65,6 +66,14 @@ SoftwareType
 					CodeArt		0.5
 					Unlock		2015
 					Submarkets	[ 3; 0; 0 ]
+					}
+					{
+					Name		"Message translation"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2017
+					Submarkets	[ 2; 3; 0 ]
 					}
 				]
 			}
@@ -143,6 +152,7 @@ SoftwareType
 			{
 			Name		Interface
 			Spec		2D
+			Dependencies	"Image Generator"
 			DevTime		2
 			CodeArt		0.4
 			Submarkets	[ 2; 1; 0 ]
@@ -170,6 +180,14 @@ SoftwareType
 					CodeArt		1
 					Unlock		2013
 					Submarkets	[ 1; 0; 4 ]
+					}
+					{
+					Name		"AI reply suggestions"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 3; 2; 0 ]
 					}
 				]
 			}

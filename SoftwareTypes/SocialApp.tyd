@@ -49,6 +49,7 @@ SoftwareType
 			{
 			Name		Feed
 			Spec		System
+			Dependencies	"Coding Assistant"
 			DevTime		4
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -78,11 +79,20 @@ SoftwareType
 					Unlock		2016
 					Submarkets	[ 3; 2; 1 ]
 					}
+					{
+					Name		"Community notes"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2021
+					Submarkets	[ 3; 1; 1 ]
+					}
 				]
 			}
 			{
 			Name		Media
 			Spec		2D
+			Dependencies	"Image Generator"
 			DevTime		3
 			CodeArt		0.5
 			Submarkets	[ 1; 2; 1 ]
@@ -110,6 +120,14 @@ SoftwareType
 					Level		1
 					CodeArt		0.3
 					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"AR face effects"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2015
+					Submarkets	[ 3; 3; 1 ]
 					}
 				]
 			}

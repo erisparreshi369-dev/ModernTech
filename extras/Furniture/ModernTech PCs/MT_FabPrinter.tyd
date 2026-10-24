@@ -1,0 +1,37 @@
+Furniture
+	{
+	Name		MT_FabPrinter
+	Base		"Large Product Printer"
+	Thumbnail	"fabprinter_thumb.png"
+	Models
+		[
+			{
+			File		"fabprinter.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Industrial Product Printer"
+		ButtonDescription       "Prints twice as fast as a large printer, twice as much per load, and for less money per copy."
+		UnlockYear              2015
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Frame
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Base
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	ProductPrinter
+		{
+		PrintSpeed	2
+		PrintAmount	4000
+		PrintPrice	0.1
+		}
+	}

@@ -1,0 +1,31 @@
+Furniture
+	{
+	Name		MT_BeanCoffee
+	Base		"Espresso Machine"
+	Thumbnail	"beancoffee_thumb.png"
+	Models
+		[
+			{
+			File		"beancoffee.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Bean-to-Cup Machine"
+		ButtonDescription       "Grinds fresh beans for every cup. Works like an espresso machine."
+		UnlockYear              2012
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Body
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Trim
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	}

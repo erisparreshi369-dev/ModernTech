@@ -150,6 +150,15 @@ SoftwareType
 					Unlock		2019
 					Submarkets	[ 0; 2; 4 ]
 					}
+					{
+					Name		"Stacked cache"
+					Description "A whole extra floor of memory"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2022
+					Submarkets	[ 1; 4; 2 ]
+					}
 				]
 			}
 			{
@@ -188,6 +197,7 @@ SoftwareType
 			{
 			Name		"Power management"
 			Spec		System
+			Dependencies	"Coding Assistant"
 			DevTime		3
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -216,11 +226,20 @@ SoftwareType
 					Unlock		2021
 					Submarkets	[ 3; 1; 1 ]
 					}
+					{
+					Name		"Dynamic voltage scaling"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2004
+					Submarkets	[ 3; 1; 2 ]
+					}
 				]
 			}
 			{
 			Name		Security
 			Spec		System
+			Dependencies	"Coding Assistant"
 			DevTime		2
 			CodeArt		1
 			Optional	True

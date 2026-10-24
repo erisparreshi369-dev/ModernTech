@@ -194,6 +194,14 @@ SoftwareType
 					Unlock		2020
 					Submarkets	[ 1; 3; 3 ]
 					}
+					{
+					Name		"GDDR7 memory"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2025
+					Submarkets	[ 3; 2; 3 ]
+					}
 				]
 			}
 			{
@@ -233,6 +241,7 @@ SoftwareType
 			{
 			Name		Drivers
 			Spec		System
+			Dependencies	"Coding Assistant"
 			DevTime		4
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -260,6 +269,15 @@ SoftwareType
 					CodeArt		1
 					Unlock		2019
 					Submarkets	[ 4; 2; 0 ]
+					}
+					{
+					Name		"Frame generation"
+					Description "Invents frames in between the real ones"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2023
+					Submarkets	[ 4; 1; 0 ]
 					}
 				]
 			}

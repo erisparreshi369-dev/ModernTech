@@ -1,0 +1,19 @@
+CompanyType
+	{
+	Specialization		"Cloud services"
+	PerYear				0.2
+	Min					2
+	Max					4
+	NameGen				MT_Company
+	Types
+		[
+			{
+			Software	"Cloud Storage"
+			Chance		1
+			}
+			{
+			Software	"Video Streaming"
+			Chance		1
+			}
+		]
+	}

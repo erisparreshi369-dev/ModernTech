@@ -1,0 +1,23 @@
+-start(base)
+-base(base2,ext,stop)
+Flick
+Reel
+Stream
+Cine
+Binge
+Glow
+Prime
+Loop
+Clip
+Wave
+-base2(ext,stop)
+flix
+tube
+cast
+view
+ TV
+-ext(stop)
+ Plus
+ Live
+ Max
+ Go

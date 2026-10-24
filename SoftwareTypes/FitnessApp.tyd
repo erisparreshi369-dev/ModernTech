@@ -38,6 +38,7 @@ SoftwareType
 			{
 			Name		Tracking
 			Spec		System
+			Dependencies	"Coding Assistant"
 			DevTime		4
 			CodeArt		1
 			Submarkets	[ 1; 1; 1 ]
@@ -73,11 +74,20 @@ SoftwareType
 					Unlock		2015
 					Submarkets	[ 0; 4; 2 ]
 					}
+					{
+					Name		"Smartwatch sync"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2015
+					Submarkets	[ 2; 3; 3 ]
+					}
 				]
 			}
 			{
 			Name		Coaching
 			Spec		2D
+			Dependencies	"Image Generator"
 			DevTime		3
 			CodeArt		0.5
 			Submarkets	[ 2; 1; 1 ]
@@ -132,6 +142,14 @@ SoftwareType
 					Level		1
 					CodeArt		1
 					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name		"Group workouts"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 3; 2; 0 ]
 					}
 				]
 			}

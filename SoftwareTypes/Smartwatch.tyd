@@ -1,0 +1,275 @@
+SoftwareType
+	{
+	Name			"Smartwatch"
+	Description		"Tells the time, and your heart rate, and your emails"
+	Random			0.2
+	OptimalDevTime	50
+	SubmarketNames	[ Fitness; Fashion; Health ]
+	NameGenerator	MT_Watch
+	InHouse			False
+	Hardware		True
+	Categories
+		[
+			{
+			Name			"Fitness band"
+			Description		"Counts your steps and judges you quietly"
+			Unlock			2009
+			Popularity		0.25
+			Retention		24
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		80
+			Submarkets		[ 4; 1; 2 ]
+			}
+			{
+			Name			"Smart watch"
+			Description		"Notifications on your wrist, so you never miss one"
+			Unlock			2014
+			Popularity		0.3
+			Retention		30
+			TimeScale		1
+			Iterative		1
+			IdealPrice		300
+			Submarkets		[ 2; 4; 2 ]
+			}
+			{
+			Name			"Health watch"
+			Description		"A small doctor that never sleeps"
+			Unlock			2020
+			Popularity		0.15
+			Retention		36
+			TimeScale		1
+			Iterative		1
+			IdealPrice		450
+			Submarkets		[ 2; 1; 4 ]
+			}
+		]
+	Manufacturing
+		{
+		Components
+			[
+				{
+				Name				"Watch chip"
+				BuiltInThumbnail	Microchip
+				Price				20
+				Time				8
+				}
+				{
+				Name				"Watch display"
+				BuiltInThumbnail	LCD
+				Price				15
+				Time				6
+				}
+				{
+				Name				"Tiny battery"
+				BuiltInThumbnail	Battery
+				Price				5
+				Time				2
+				}
+				{
+				Name				"Haptic motor"
+				BuiltInThumbnail	Vibration
+				Price				3
+				Time				2
+				}
+				{
+				Name				"Heart-rate sensor"
+				BuiltInThumbnail	LED
+				Price				6
+				Time				4
+				DependsOn			"Heart-rate monitor"
+				}
+				{
+				Name				"GPS module"
+				BuiltInThumbnail	Antenna
+				Price				8
+				Time				4
+				DependsOn			GPS
+				}
+				{
+				Name				"Cellular modem"
+				BuiltInThumbnail	Antenna
+				Price				15
+				Time				6
+				DependsOn			"Cellular connectivity"
+				}
+				{
+				Name				"Circuit board"
+				BuiltInThumbnail	PCB
+				Price				8
+				Time				6
+				}
+				{
+				Name				"Watch case"
+				BuiltInThumbnail	PlasticCase
+				Price				10
+				Time				4
+				}
+			]
+		Processes
+			[
+				{
+				Inputs	[ "Watch chip"; "Heart-rate sensor"; "GPS module"; "Cellular modem" ]
+				Output	"Circuit board"
+				}
+				{
+				Inputs	[ "Watch display"; "Tiny battery"; "Haptic motor" ]
+				Output	"Watch case"
+				}
+				{
+				Inputs	[ "Circuit board"; "Watch case" ]
+				Output	Final
+				}
+			]
+		FinalTime	2
+		Design		[ MT_Watch ]
+		}
+	Features
+		[
+			{
+			Name		Sensors
+			Spec		Hardware
+			DevTime		5
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Step counter"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 4; 0; 1 ]
+					}
+					{
+					Name		"Heart-rate monitor"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 3; 0; 3 ]
+					}
+					{
+					Name		ECG
+					Description "Hospital-grade heart checks, on your wrist"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2018
+					Submarkets	[ 1; 0; 4 ]
+					}
+					{
+					Name		"Blood oxygen sensor"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2020
+					Submarkets	[ 2; 0; 4 ]
+					}
+				]
+			}
+			{
+			Name		Connectivity
+			Spec		Network
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Bluetooth sync"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 2; 2; 2 ]
+					}
+					{
+					Name		GPS
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2013
+					Submarkets	[ 4; 0; 1 ]
+					}
+					{
+					Name		"Cellular connectivity"
+					Description "Leave the phone at home. You won't, but you could"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2017
+					Submarkets	[ 2; 3; 2 ]
+					}
+				]
+			}
+			{
+			Name		Design
+			Spec		Hardware
+			DevTime		3
+			CodeArt		0.5
+			Submarkets	[ 0; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Touchscreen"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Unlock		2014
+					Submarkets	[ 1; 3; 1 ]
+					}
+					{
+					Name		"Always-on display"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2019
+					Submarkets	[ 1; 3; 1 ]
+					}
+					{
+					Name		"Swappable straps"
+					DevTime		1
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 0; 4; 0 ]
+					}
+				]
+			}
+			{
+			Name			"Watch OS"
+			Spec			System
+			DevTime			4
+			CodeArt			1
+			Dependencies	"Coding Assistant"
+			Submarkets		[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		Notifications
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 3; 0 ]
+					}
+					{
+					Name		"Watch app store"
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Unlock		2015
+					Submarkets	[ 2; 3; 1 ]
+					}
+					{
+					Name				"Fall detection"
+					Description			"Calls for help if you don't get up"
+					DevTime				3
+					Level				2
+					CodeArt				1
+					Unlock				2018
+					SoftwareCategories	[ "Health watch" ]
+					Submarkets			[ 0; 0; 4 ]
+					}
+				]
+			}
+		]
+	}

@@ -1,0 +1,199 @@
+SoftwareType
+	{
+	Name			"Cloud Storage"
+	Description		"Your files, on someone else's computer, everywhere at once"
+	Random			0.2
+	OptimalDevTime	40
+	SubmarketNames	[ Consumers; Business; Developers ]
+	NameGenerator	MT_Cloud
+	OSSupport		[ Computer; Phone ]
+	InHouse			False
+	Categories
+		[
+			{
+			Name			"File sync"
+			Description		"Drop a file in a folder, find it on your phone"
+			Unlock			2007
+			Popularity		0.4
+			Retention		36
+			TimeScale		0.8
+			Iterative		1
+			IdealPrice		40
+			Submarkets		[ 4; 1; 0 ]
+			}
+			{
+			Name			"Team drive"
+			Description		"One folder for the whole office, finally"
+			Unlock			2012
+			Popularity		0.25
+			Retention		48
+			TimeScale		1
+			Iterative		1
+			IdealPrice		120
+			Submarkets		[ 0; 4; 1 ]
+			}
+			{
+			Name			"Object storage"
+			Description		"Buckets of bytes for apps that never stop growing"
+			Unlock			2006
+			Popularity		0.1
+			Retention		48
+			TimeScale		1
+			Iterative		1
+			IdealPrice		300
+			Submarkets		[ 0; 1; 4 ]
+			}
+		]
+	Features
+		[
+			{
+			Name			"Sync engine"
+			Spec			System
+			DevTime			6
+			CodeArt			1
+			Dependencies	"Coding Assistant"
+			Submarkets		[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Selective sync"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 0 ]
+					}
+					{
+					Name		"Delta sync"
+					Description "Only uploads the bits you changed"
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2010
+					Submarkets	[ 1; 2; 3 ]
+					}
+					{
+					Name		"Offline files"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 2; 0 ]
+					}
+				]
+			}
+			{
+			Name		Sharing
+			Spec		Network
+			DevTime		4
+			CodeArt		1
+			Submarkets	[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Share links"
+					Server		0.0005
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Submarkets	[ 3; 1; 1 ]
+					}
+					{
+					Name		"Shared folders"
+					Server		0.0005
+					DevTime		3
+					Level		2
+					CodeArt		1
+					Submarkets	[ 1; 4; 0 ]
+					}
+					{
+					Name		"Version history"
+					Description "Undo for the whole hard drive"
+					Server		0.001
+					DevTime		4
+					Level		2
+					CodeArt		1
+					Unlock		2011
+					Submarkets	[ 1; 3; 2 ]
+					}
+					{
+					Name				"Storage API"
+					Server				0.001
+					DevTime				4
+					Level				2
+					CodeArt				1
+					SoftwareCategories	[ "Object storage" ]
+					Submarkets			[ 0; 0; 4 ]
+					}
+				]
+			}
+			{
+			Name			Security
+			Spec			System
+			DevTime			3
+			CodeArt			1
+			Dependencies	"Coding Assistant"
+			Submarkets		[ 1; 1; 1 ]
+			Features
+				[
+					{
+					Name		"Encryption at rest"
+					DevTime		3
+					Level		1
+					CodeArt		1
+					Submarkets	[ 1; 3; 2 ]
+					}
+					{
+					Name		"Zero-knowledge encryption"
+					Description "Not even we can read your files. Promise"
+					DevTime		5
+					Level		2
+					CodeArt		1
+					Unlock		2014
+					Submarkets	[ 3; 2; 1 ]
+					}
+					{
+					Name		"Two-factor login"
+					DevTime		2
+					Level		1
+					CodeArt		1
+					Unlock		2012
+					Submarkets	[ 2; 3; 1 ]
+					}
+				]
+			}
+			{
+			Name			Interface
+			Spec			2D
+			DevTime			3
+			CodeArt			0.5
+			Dependencies	"Image Generator"
+			Submarkets		[ 1; 1; 0 ]
+			Features
+				[
+					{
+					Name		"Web file browser"
+					DevTime		2
+					Level		1
+					CodeArt		0.5
+					Submarkets	[ 2; 2; 1 ]
+					}
+					{
+					Name		"Photo backup"
+					Description "Every blurry photo you ever took, kept forever"
+					Server		0.001
+					DevTime		3
+					Level		1
+					CodeArt		0.6
+					Unlock		2010
+					Submarkets	[ 4; 0; 0 ]
+					}
+					{
+					Name		"Document previews"
+					DevTime		3
+					Level		2
+					CodeArt		0.6
+					Submarkets	[ 1; 3; 0 ]
+					}
+				]
+			}
+		]
+	}

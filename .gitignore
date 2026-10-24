@@ -22,3 +22,6 @@ desktop.ini
 
 # Upload-ready packages built by tools/package.sh
 /dist/
+
+# Written by the game on Workshop upload
+TypeInfo.txt

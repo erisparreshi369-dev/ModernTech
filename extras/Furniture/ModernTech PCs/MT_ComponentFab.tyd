@@ -1,0 +1,36 @@
+Furniture
+	{
+	Name		MT_ComponentFab
+	Base		"Component Printer"
+	Thumbnail	"componentfab_thumb.png"
+	Models
+		[
+			{
+			File		"componentfab.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Rapid Component Fab"
+		ButtonDescription       "Makes hardware components twice as fast as a component printer, and cheaper."
+		UnlockYear              2018
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Body
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Trim
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	ProductPrinter
+		{
+		PrintSpeed	2
+		PrintPrice	0.1
+		}
+	}

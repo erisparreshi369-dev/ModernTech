@@ -1,0 +1,24 @@
+CompanyType
+	{
+	Specialization		"Smart devices"
+	PerYear				0.15
+	Min					2
+	Max					4
+	Frameworks			False
+	NameGen				MT_Company
+	Types
+		[
+			{
+			Software	"VR Headset"
+			Chance		1
+			}
+			{
+			Software	Smartwatch
+			Chance		1
+			}
+			{
+			Software	"Smart Home Hub"
+			Chance		1
+			}
+		]
+	}

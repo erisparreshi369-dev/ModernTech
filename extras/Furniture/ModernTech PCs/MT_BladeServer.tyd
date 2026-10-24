@@ -1,0 +1,38 @@
+Furniture
+	{
+	Name		MT_BladeServer
+	Base		"Server Rack"
+	Thumbnail	"bladeserver_thumb.png"
+	Models
+		[
+			{
+			File		"bladeserver.obj"
+			Material	MT_PC
+			Position	[ 0; 0; 0 ]
+			Rotation	[ 0; 0; 0 ]
+			Scale		[ 1; 1; 1 ]
+			}
+		]
+	Furniture
+		{
+		LocalizedName           "Blade Server Rack"
+		ButtonDescription       "Packed with blade servers: three times the power of a server rack in the same space."
+		Cost                    25000
+		Wattage                 4000
+		Noisiness               1.5
+		UnlockYear              2008
+		ColorPrimaryEnabled     True
+		ColorPrimaryDefault     "2B2D33"
+		PrimaryColorName        Case
+		ColorSecondaryEnabled   True
+		ColorSecondaryDefault   "8A8F99"
+		SecondaryColorName      Blades
+		ColorTertiaryEnabled    True
+		ColorTertiaryDefault    "20C8E0"
+		TertiaryColorName       Lights
+		}
+	Server
+		{
+		Power	15000
+		}
+	}

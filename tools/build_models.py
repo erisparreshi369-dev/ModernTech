@@ -165,6 +165,153 @@ def build_ultrabook():
     return parts
 
 
+def build_vr_station():
+    headset = [box((0.20, 0.11, 0.09), (-0.40, -0.12, 0.045), "primary"),
+               box((0.17, 0.004, 0.06), (-0.40, -0.177, 0.05), "glass"),
+               box((0.22, 0.02, 0.02), (-0.40, -0.06, 0.08), "black")]
+    controllers = [cyl(0.025, 0.12, (x, -0.30, 0.06), "secondary") for x in (0.36, 0.44)]
+    tower = [box((0.18, 0.38, 0.40), (0.55, 0.02, 0.20), "primary"),
+             box((0.005, 0.30, 0.30), (0.459, 0.02, 0.22), "glass"),
+             box((0.004, 0.30, 0.015), (0.457, 0.02, 0.38), "glow")]
+    return monitor(0.60, 0.36) + keyboard(glow=True) + headset + controllers + tower
+
+
+def build_ultrawide():
+    parts = []
+    for i, turn in enumerate((14, 0, -14)):  # three panels make one curved screen
+        parts += monitor(0.36, 0.36, x=(i - 1) * 0.35, y=0.03 + abs(i - 1) * 0.045, turn=turn)[:2]
+    parts += [box((0.05, 0.03, 0.13), (0, 0.06, 0.07), "metal"),
+              box((0.30, 0.16, 0.012), (0, 0.05, 0.006), "metal")]
+    return parts + keyboard() + mouse(x=0.31) + [box((0.10, 0.10, 0.03), (-0.40, -0.20, 0.015), "secondary")]
+
+
+def build_ai_panel():
+    """Wall screen: the AI assistant's face, glowing on the office wall."""
+    y = -0.15
+    parts = [box((0.60, 0.04, 0.55), (0, y, 0), "primary"),
+             box((0.54, 0.004, 0.42), (0, y - 0.022, 0.03), "screen"),
+             box((0.50, 0.004, 0.02), (0, y - 0.022, -0.235), "glow")]
+    parts.append(cyl(0.09, 0.006, (0, y - 0.026, 0.05), "glow", (90, 0, 0), verts=32))
+    parts.append(cyl(0.06, 0.008, (0, y - 0.027, 0.05), "screen", (90, 0, 0), verts=32))
+    return parts
+
+
+def rack(width, height, depth, units, glow_every=1):
+    parts = [box((width, depth, height), (0, 0, height / 2), "primary"),
+             box((width - 0.06, 0.01, height - 0.08), (0, -depth / 2 - 0.004, height / 2), "black")]
+    step = (height - 0.16) / units
+    for i in range(units):
+        z = 0.10 + step * (i + 0.5)
+        parts.append(box((width - 0.12, 0.012, step * 0.7), (0, -depth / 2 - 0.01, z), "secondary"))
+        if i % glow_every == 0:
+            parts.append(box((0.04, 0.004, 0.012), (width / 2 - 0.12, -depth / 2 - 0.018, z), "glow"))
+    return parts
+
+
+def build_blade_server():
+    return rack(0.90, 1.85, 0.95, 10)
+
+
+def build_ai_cluster():
+    parts = []
+    for x in (-0.5, 0.5):
+        for p in rack(0.95, 1.80, 0.95, 8):
+            p.location.x += x
+            parts.append(p)
+    parts.append(box((1.96, 0.97, 0.03), (0, 0, 1.815), "glow"))  # light bar across the top
+    return parts
+
+
+def build_fab_printer():
+    y = 0.11
+    return [box((1.05, 1.80, 0.30), (0, y, 0.15), "secondary"),
+            box((1.05, 1.80, 0.06), (0, y, 1.51), "primary"),
+            box((0.06, 1.80, 1.20), (-0.50, y, 0.90), "primary"),
+            box((0.06, 1.80, 1.20), (0.50, y, 0.90), "primary"),
+            box((0.92, 1.70, 0.004), (0, y, 0.92), "glass"),
+            box((0.30, 0.20, 0.10), (0, y, 1.20), "black"),
+            box((0.98, 0.04, 0.03), (0, y, 1.25), "metal"),
+            box((0.92, 0.01, 0.02), (0, y - 0.905, 0.32), "glow"),
+            box((0.30, 0.02, 0.20), (0.30, y - 0.91, 1.30), "screen")]
+
+
+def build_component_fab():
+    return [box((0.95, 1.95, 0.80), (0, 0, 0.40), "primary"),
+            box((0.95, 1.95, 0.05), (0, 0, 0.825), "secondary"),
+            box((0.70, 1.60, 0.50), (0, 0, 1.10), "glass"),
+            box((0.20, 0.20, 0.25), (0, 0.2, 1.00), "metal"),
+            box((0.80, 0.01, 0.02), (0, -0.98, 0.70), "glow"),
+            box((0.30, 0.02, 0.20), (0.25, -0.985, 0.55), "screen")]
+
+
+def build_smart_fridge():
+    y = 0.15
+    return [box((0.74, 0.58, 1.48), (0, y, 0.74), "primary"),
+            box((0.004, 0.012, 1.40), (0, y - 0.296, 0.75), "black"),
+            box((0.30, 0.01, 0.40), (-0.18, y - 0.296, 1.05), "screen"),
+            box((0.02, 0.03, 0.50), (0.04, y - 0.30, 0.95), "metal"),
+            box((0.02, 0.03, 0.50), (-0.04, y - 0.30, 0.95), "metal"),
+            box((0.10, 0.004, 0.01), (-0.18, y - 0.30, 0.82), "glow")]
+
+
+def build_induction_stove():
+    y = 0.10
+    parts = [box((0.78, 0.78, 0.86), (0, y, 0.43), "primary"),
+             box((0.78, 0.78, 0.02), (0, y, 0.87), "glass"),
+             box((0.64, 0.01, 0.40), (0, y - 0.39, 0.40), "glass"),
+             box((0.60, 0.012, 0.02), (0, y - 0.392, 0.70), "metal")]
+    for x in (-0.19, 0.19):
+        for dy in (-0.18, 0.18):
+            parts.append(cyl(0.12, 0.004, (x, y + dy, 0.882), "glow"))
+    return parts
+
+
+def build_bean_coffee():
+    y = -0.05
+    return [box((0.40, 0.38, 0.44), (0, y + 0.02, 0.22), "primary"),
+            box((0.40, 0.10, 0.06), (0, y - 0.14, 0.41), "secondary"),
+            box((0.26, 0.012, 0.12), (0, y - 0.175, 0.30), "screen"),
+            box((0.06, 0.06, 0.05), (0, y - 0.15, 0.35), "metal"),
+            cyl(0.03, 0.08, (0, y - 0.13, 0.08), "secondary", verts=16),
+            box((0.30, 0.16, 0.02), (0, y - 0.12, 0.01), "metal"),
+            cyl(0.07, 0.10, (0.10, y + 0.08, 0.49), "glass", verts=16)]
+
+
+def build_smart_vending():
+    return [box((0.78, 0.76, 1.38), (0, 0, 0.69), "primary"),
+            box((0.50, 0.01, 1.00), (-0.10, -0.385, 0.80), "glass"),
+            box((0.14, 0.01, 0.30), (0.28, -0.385, 1.00), "screen"),
+            box((0.50, 0.02, 0.12), (-0.10, -0.39, 0.15), "black"),
+            box((0.004, 0.01, 1.00), (0.17, -0.39, 0.80), "glow")] + \
+           [box((0.46, 0.30, 0.01), (-0.10, -0.20, 0.45 + i * 0.25), "secondary") for i in range(4)]
+
+
+def build_heat_pump():
+    return [box((0.44, 0.48, 0.84), (0, 0, 0.42), "primary"),
+            cyl(0.16, 0.01, (0, -0.245, 0.50), "black", (90, 0, 0), verts=32),
+            cyl(0.05, 0.015, (0, -0.25, 0.50), "secondary", (90, 0, 0)),
+            box((0.30, 0.01, 0.06), (0, -0.245, 0.18), "screen"),
+            box((0.06, 0.004, 0.01), (0.12, -0.25, 0.18), "glow")]
+
+
+def build_power_wall():
+    parts = [box((0.96, 1.96, 0.10), (0, 0, 0.05), "secondary")]
+    for x in (-0.24, 0.24):
+        for y in (-0.48, 0.48):
+            parts.append(box((0.44, 0.90, 1.30), (x, y, 0.75), "primary"))
+            parts.append(box((0.02, 0.60, 0.02), (x, y, 1.41), "glow"))
+    return parts
+
+
+def build_smart_vent():
+    y, z = -0.15, 1.6
+    parts = [box((0.40, 0.08, 0.40), (0, y, z), "primary"),
+             cyl(0.15, 0.01, (0, y - 0.045, z), "black", (90, 0, 0), verts=32),
+             cyl(0.04, 0.015, (0, y - 0.05, z), "secondary", (90, 0, 0)),
+             cyl(0.17, 0.006, (0, y - 0.042, z), "glow", (90, 0, 0), verts=32)]
+    return parts
+
+
 def build_gpu():
     """Graphics card for the hardware design editor: fits the 2x2x2 cube."""
     parts = [box((1.90, 0.06, 0.80), (0, 0.12, 0), "pcb"),
@@ -185,6 +332,28 @@ def build_cpu():
             box((1.20, 1.20, 0.16), (0, 0, 0.03), "primary"),
             box((0.80, 0.30, 0.01), (0, -0.30, 0.115), "secondary"),
             box((1.56, 1.56, 0.02), (0, 0, -0.16), "gold")]
+
+
+def build_vr():
+    """VR headset seen from the front: visor, lenses, strap."""
+    parts = [box((1.60, 0.90, 0.85), (0, 0, 0), "primary"),
+             box((1.50, 0.02, 0.75), (0, -0.46, 0), "glass"),
+             box((1.62, 0.20, 0.10), (0, 0.10, -0.47), "secondary"),
+             box((0.10, 1.00, 0.30), (-0.85, 0.40, 0.05), "secondary"),
+             box((0.10, 1.00, 0.30), (0.85, 0.40, 0.05), "secondary"),
+             box((1.20, 0.02, 0.03), (0, -0.475, 0.30), "glow")]
+    for x in (-0.42, 0.42):
+        parts.append(cyl(0.12, 0.02, (x, -0.475, -0.05), "black", (90, 0, 0), verts=24))
+    return parts
+
+
+def build_watch():
+    """Smartwatch lying face up: case, screen, crown, strap."""
+    return [box((0.90, 1.05, 0.30), (0, 0, 0.10), "primary"),
+            box((0.80, 0.95, 0.02), (0, 0, 0.26), "screen"),
+            box((0.60, 1.90, 0.08), (0, 0, -0.10), "secondary"),
+            cyl(0.07, 0.10, (0.50, 0.15, 0.12), "tertiary", (0, 90, 0), verts=16),
+            box((0.50, 0.03, 0.005), (0, -0.30, 0.272), "glow")]
 
 
 def clear_scene():
@@ -254,8 +423,22 @@ FURNITURE = {
     "workstation": build_workstation,
     "aiworkstation": build_ai_workstation,
     "ultrabook": build_ultrabook,
+    "vrstation": build_vr_station,
+    "ultrawide": build_ultrawide,
+    "aipanel": build_ai_panel,
+    "bladeserver": build_blade_server,
+    "aicluster": build_ai_cluster,
+    "fabprinter": build_fab_printer,
+    "componentfab": build_component_fab,
+    "smartfridge": build_smart_fridge,
+    "inductionstove": build_induction_stove,
+    "beancoffee": build_bean_coffee,
+    "smartvending": build_smart_vending,
+    "heatpump": build_heat_pump,
+    "powerwall": build_power_wall,
+    "smartvent": build_smart_vent,
 }
-DESIGNS = {"MT_GPU": build_gpu, "MT_CPU": build_cpu}
+DESIGNS = {"MT_GPU": build_gpu, "MT_CPU": build_cpu, "MT_VR": build_vr, "MT_Watch": build_watch}
 
 
 def main():
@@ -283,7 +466,7 @@ def render_previews():
     pcs = []
     for i, build in enumerate(FURNITURE.values()):
         pcs.append(join(build(), "pc%d" % i))
-        pcs[-1].location = ((i % 2) * 1.5, (i // 2) * 1.0, 0)
+        pcs[-1].location = ((i % 6) * 2.3, (i // 6) * 2.3, 0)
     render_thumbnail(pcs, os.path.join(FURN_DIR, "Thumbnail.png"), res=512, transparent=False)
 
     clear_scene()
