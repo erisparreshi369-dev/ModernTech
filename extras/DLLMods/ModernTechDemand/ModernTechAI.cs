@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-// Optional companion to the ModernTech data mod: your employees use your own AI coding agent.
+// Optional companion to the ModernTech data mod: your employees use your own AI.
 //
-// When your company has released its own "Coding agent" (the third category of the
-// Coding Assistant software type, in-house or for sale) and the boost is switched on,
+// Once your company has released any of its own AI products (an AI Assistant, Coding
+// Assistant or Image Generator, in-house or for sale) and the boost is switched on,
 // software design and development run 100% faster (twice as fast).
 //
 // Employee effectiveness is recalculated by the game after every work step, so the boost
@@ -25,24 +26,21 @@ public class ModernTechAI : ModBehaviour
 
 	private const string AnnouncedKey = "ai-boost-announced";
 
-	// Only this product unlocks the boost: Coding Assistant -> "Coding agent"
-	private const string AgentType = "Coding Assistant";
+	// Any of these released products unlocks the boost
+	private static readonly HashSet<string> AITypes = new HashSet<string>
+	{
+		"AI Assistant",
+		"Coding Assistant",
+		"Image Generator"
+	};
 
-	private const string AgentCategory = "Coding agent";
-
-	// Player's choice, on by default. A released coding agent is still required on top of it
+	// Player's choice, on by default. One of the AI products is still required on top of it
 	private bool _enabled = true;
 
 	// Whether the player has already been told about the boost in this installation
 	private bool _announced;
 
 	private float _nextCheck;
-
-	private string _toastText;
-
-	private float _toastUntil;
-
-	private GUIStyle _toastStyle;
 
 	public override void OnActivate()
 	{
@@ -67,7 +65,7 @@ public class ModernTechAI : ModBehaviour
 			return;
 		}
 		_nextCheck = Time.unscaledTime + 2f;
-		bool active = _enabled && HasCodingAgent();
+		bool active = _enabled && HasOwnAI();
 		if (active && !_announced)
 		{
 			_announced = true;
@@ -82,9 +80,9 @@ public class ModernTechAI : ModBehaviour
 	{
 		_enabled = !_enabled;
 		SaveSetting(EnabledKey, _enabled);
-		bool active = _enabled && HasCodingAgent();
+		bool active = _enabled && HasOwnAI();
 		Apply(active);
-		Toast(active ? "AI coding agent: employees work 100% faster (Ctrl+Alt+A to switch off)" : "AI coding agent boost switched off (Ctrl+Alt+A to switch on)");
+		Toast(active ? "AI products in use: employees work 100% faster (Ctrl+Alt+A to switch off)" : "AI boost switched off (Ctrl+Alt+A to switch on)");
 	}
 
 	// The difficulty to switch to, or null when it already matches
@@ -104,8 +102,8 @@ public class ModernTechAI : ModBehaviour
 		return copy;
 	}
 
-	// True when the player's company has released its own coding agent
-	public static bool HasCodingAgent()
+	// True when the player's company has released any of its own AI products
+	public static bool HasOwnAI()
 	{
 		GameSettings gs = GameSettings.Instance;
 		if (gs == null || gs.MyCompany == null || gs.MyCompany.Products == null)
@@ -114,11 +112,11 @@ public class ModernTechAI : ModBehaviour
 		}
 		foreach (SoftwareProduct product in gs.MyCompany.Products)
 		{
-			if (product == null || product.Type == null || product.Category == null)
+			if (product == null || product.Type == null)
 			{
 				continue;
 			}
-			if (product.Type.Name == AgentType && product.Category.Name == AgentCategory)
+			if (AITypes.Contains(product.Type.Name))
 			{
 				return true;
 			}
@@ -140,7 +138,7 @@ public class ModernTechAI : ModBehaviour
 		}
 	}
 
-	// One-time explanation, the first time the coding agent actually boosts the player
+	// One-time explanation, the first time the player's AI actually boosts the company
 	private void Announce()
 	{
 		if (WindowManager.Instance == null)
@@ -148,34 +146,14 @@ public class ModernTechAI : ModBehaviour
 			return;
 		}
 		WindowManager.Instance.ShowMessageBox(
-			"Your employees now use your own AI coding agent. Software design and development run twice as fast.\n\nPress Ctrl+Alt+A to switch the boost off or on again.",
+			"Your employees now use your own AI products. Software design and development run twice as fast.\n\nPress Ctrl+Alt+A to switch the boost off or on again.",
 			true,
 			DialogWindow.DialogType.Information);
 	}
 
 	private void Toast(string text)
 	{
-		_toastText = text;
-		_toastUntil = Time.unscaledTime + 4f;
-	}
-
-	private void OnGUI()
-	{
-		if (_toastText == null || Time.unscaledTime > _toastUntil)
-		{
-			return;
-		}
-		if (_toastStyle == null)
-		{
-			_toastStyle = new GUIStyle(GUI.skin.label);
-			_toastStyle.alignment = TextAnchor.MiddleCenter;
-			_toastStyle.fontSize = 15;
-			_toastStyle.wordWrap = true;
-			_toastStyle.normal.textColor = Color.white;
-		}
-		float width = 520f;
-		Rect box = new Rect((Screen.width - width) / 2f, 48f, width, 34f);
-		GUI.Box(box, "");
-		GUI.Label(new Rect(box.x + 8f, box.y + 4f, width - 16f, 26f), _toastText, _toastStyle);
+		// The in-game debug console shows these, so a toggle is always traceable
+		UnityEngine.Debug.Log("[ModernTech] " + text);
 	}
 }

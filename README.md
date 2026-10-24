@@ -90,8 +90,8 @@ The case, accent and light colors can be changed in-game. They upgrade like the 
 - **Gadgeteer**: RGB Thumb + Forgetful
 - **Nocturnal**: Night owl
 
-### Your own AI coding agent doubles your team's speed (ModernTech Demand code mod)
-Once your company has released its own **Coding agent** — the top category of the Coding Assistant software type, in-house or for sale — your employees use it and designing and developing software goes **100% faster** (twice as fast). Smart autocomplete and AI pair programmer products don't count; only the coding agent does.
+### Your own AI doubles your team's speed (ModernTech Demand code mod)
+Once your company has released any of its own AI products — an **AI Assistant, Coding Assistant or Image Generator**, in-house or for sale — your employees use them and designing and developing software goes **100% faster** (twice as fast). Every category counts, from voice assistants and photo filters to smart autocomplete and coding agents.
 
 **It's an option:** press **Ctrl+Alt+A** in game to switch the boost on or off. The choice is remembered, so it survives saving, loading and starting a new game. The first time it kicks in, the game shows a one-time message explaining the key.
 
