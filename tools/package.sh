@@ -10,7 +10,7 @@ python3 -I "$root/tools/check_tyd.py"
 
 rm -rf "$dist"
 mkdir -p "$dist"
-rsync -a --exclude='.git*' --exclude=tools --exclude=extras --exclude=dist --exclude=README.md --exclude=LICENSE \
+rsync -a --exclude='.git*' --exclude=tools --exclude=extras --exclude=dist --exclude=downloads --exclude=README.md --exclude=LICENSE \
 	"$root/" "$dist/ModernTech/"
 rsync -a "$root/extras/Furniture/ModernTech PCs/" "$dist/ModernTech PCs/"
 rsync -a --exclude='*.dcache' --exclude='*H.bin' "$root/extras/DLLMods/ModernTechDemand/" "$dist/ModernTechDemand/"

@@ -4,6 +4,14 @@ A modern-technology content pack for **Software Inc.**: AI software, phone apps,
 
 Workshop-compatible: TyD data, OBJ models, and one optional `.cs` script that the game compiles itself. No DLLs, no Harmony.
 
+## Download without the Steam Workshop
+
+If the Workshop page is unavailable, download the ready-to-install packages straight from this repo:
+
+**[downloads/ModernTech-packages.zip](downloads/ModernTech-packages.zip)** (~1 MB)
+
+It contains all three packages plus an `INSTALL.txt` saying which game folder each one goes in. To rebuild it, run `tools/package.ps1` on Windows: it validates every TyD file, writes `dist/` and refreshes this archive. `tools/package.sh` builds the same three packages on Linux/macOS.
+
 ## What's in the box
 
 The game loads data, furniture and code mods from different folders, so ModernTech comes in three parts:

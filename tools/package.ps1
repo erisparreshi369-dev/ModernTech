@@ -81,7 +81,7 @@ New-Item -ItemType Directory -Force -Path $dist | Out-Null
 
 # Data package: everything at the repo root except development-only material
 Copy-PackageTree -Source $root -Target (Join-Path $dist 'ModernTech') `
-    -ExcludeDirectories @('.git', 'tools', 'extras', 'dist') `
+    -ExcludeDirectories @('.git', 'tools', 'extras', 'dist', 'downloads') `
     -ExcludeFiles @('README.md', 'LICENSE') `
     -ExcludePatterns @('.git*')
 
@@ -117,7 +117,41 @@ if ($problems.Count -gt 0) {
     throw "Packaging failed: $($problems.Count) file(s) not allowed."
 }
 
-# --- 5. Report -------------------------------------------------------------
+# --- 5. Downloadable archive for people who cannot use the Workshop --------
+$downloads = Join-Path $root 'downloads'
+New-Item -ItemType Directory -Force -Path $downloads | Out-Null
+
+$install = @"
+ModernTech - manual install
+===========================
+
+This zip holds three packages. Copy each one into a different folder of your
+Software Inc install (Steam > Software Inc > Manage > Browse local files):
+
+  ModernTech        ->  Mods\ModernTech              (required)
+  ModernTech PCs    ->  Furniture\ModernTech PCs     (optional furniture)
+  ModernTechDemand  ->  DLLMods\ModernTechDemand     (optional code mod)
+
+Then start the game, open Options > Mods and tick what you copied. The first
+time, the game asks you to allow the .cs code mod (ModernTech Demand).
+
+New software types only appear in a new game; existing saves keep their markets.
+
+Source and issues: https://github.com/erisparreshi369-dev/ModernTech
+"@
+Set-Content -Path (Join-Path $dist 'INSTALL.txt') -Value $install -Encoding ASCII
+
+$archive = Join-Path $downloads 'ModernTech-packages.zip'
+if (Test-Path -LiteralPath $archive) { Remove-Item -LiteralPath $archive -Force }
+# Python's zipfile writes forward-slash entry names; .NET's Compress-Archive and
+# ZipFile both write backslashes, which other tools extract as part of the name.
+$archiveBase = $archive -replace '\.zip$', ''
+& $python.Source -c "import shutil,sys; shutil.make_archive(sys.argv[1], 'zip', sys.argv[2])" $archiveBase $dist
+if ($LASTEXITCODE -ne 0 -or -not (Test-Path -LiteralPath $archive)) {
+    throw 'Could not build the download archive.'
+}
+
+# --- 6. Report -------------------------------------------------------------
 Write-Host ''
 Write-Host 'Packages in dist/:' -ForegroundColor Green
 foreach ($package in $allowedExtensions.Keys) {
@@ -126,6 +160,9 @@ foreach ($package in $allowedExtensions.Keys) {
     $count = (Get-ChildItem -LiteralPath $folder.FullName -Recurse -File | Measure-Object).Count
     Write-Host ('  {0,-18} {1,6:N1} MB  ({2} files)' -f $package, ($bytes / 1MB), $count)
 }
+$archiveFile = Get-Item -LiteralPath $archive
 Write-Host ''
-Write-Host 'Upload these from dist/ in Options > Mods, then copy the new SteamID'
+Write-Host ('Download archive: downloads\{0} ({1:N1} MB)' -f $archiveFile.Name, ($archiveFile.Length / 1MB)) -ForegroundColor Green
+Write-Host ''
+Write-Host 'Upload from dist/ in Options > Mods, then copy the new SteamID'
 Write-Host 'values from each meta.tyd back into the repo and commit them.'
